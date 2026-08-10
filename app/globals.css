@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+/* ============================================================
+   ブランド買取ナビ — Design System
+   「静かな高級」: 墨黒 × シャンパンゴールド × アイボリー
+   見出し: Zen Old Mincho ／ 本文: Noto Sans JP
+   ============================================================ */
+
+@theme inline {
+  --font-sans: var(--font-noto-sans-jp);
+  --font-serif: var(--font-zen-old-mincho);
+
+  --color-ink: #211d18;
+  --color-ink-soft: #4a443c;
+  --color-muted: #8d857a;
+  --color-ivory: #f7f4ef;
+  --color-ivory-deep: #efeae2;
+  --color-gold: #b08d57;
+  --color-gold-soft: #cbb28c;
+  --color-gold-pale: #f1e8d8;
+  --color-line: #e2dbd0;
+  --color-accent: #7d2e2e;
+}
+
+body {
+  background:
+    radial-gradient(1000px 500px at 90% -200px, rgba(176, 141, 87, 0.07), transparent 60%),
+    #f7f4ef;
+  color: #211d18;
+  font-family: var(--font-noto-sans-jp), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .serif {
+  font-family: var(--font-zen-old-mincho), var(--font-noto-sans-jp), serif;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+/* --- 罫線・装飾 --- */
+.rule-gold { position: relative; padding-bottom: 0.7rem; }
+.rule-gold::after {
+  content: ""; position: absolute; left: 0; bottom: 0;
+  width: 3.2rem; height: 2px;
+  background: linear-gradient(90deg, #b08d57, #cbb28c);
+}
+.rule-gold-center { position: relative; padding-bottom: 0.8rem; }
+.rule-gold-center::after {
+  content: ""; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0;
+  width: 3.2rem; height: 2px;
+  background: linear-gradient(90deg, #b08d57, #cbb28c);
+}
+.eyebrow {
+  font-size: 0.72rem; letter-spacing: 0.28em; color: #b08d57; font-weight: 700;
+}
+
+/* --- Header / Footer --- */
+.site-header {
+  background: rgba(247, 244, 239, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2dbd0;
+}
+.nav-link { position: relative; transition: color .2s; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -4px;
+  height: 1px; background: #b08d57;
+  transform: scaleX(0); transition: transform .25s ease;
+}
+.nav-link:hover { color: #b08d57; }
+.nav-link:hover::after { transform: scaleX(1); }
+.site-footer { background: #211d18; }
+.footer-link { font-size: 0.85rem; color: rgba(247, 244, 239, 0.66); transition: color .2s; }
+.footer-link:hover { color: #cbb28c; }
+
+/* --- 部品 --- */
+.btn-gold {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: #211d18; color: #f7f4ef;
+  font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em;
+  padding: 0.8rem 1.9rem; border: 1px solid #211d18;
+  transition: background .2s, color .2s;
+}
+.btn-gold:hover { background: #b08d57; border-color: #b08d57; color: #fff; }
+.btn-line {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: transparent; color: #211d18;
+  font-weight: 600; font-size: 0.9rem;
+  padding: 0.8rem 1.9rem; border: 1px solid #b08d57;
+  transition: background .2s;
+}
+.btn-line:hover { background: #f1e8d8; }
+
+.card-lux {
+  background: #fff; border: 1px solid #e2dbd0;
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+.card-lux:hover { box-shadow: 0 14px 40px rgba(33, 29, 24, 0.09); transform: translateY(-2px); }
+
+.table-lux { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.table-lux th {
+  background: #211d18; color: #f7f4ef; font-weight: 600;
+  padding: 0.75rem 1rem; text-align: left; letter-spacing: 0.04em;
+}
+.table-lux td { padding: 0.75rem 1rem; border-bottom: 1px solid #efeae2; background: #fff; }
+.table-lux tr:hover td { background: #faf7f1; }
+
+.note-box {
+  background: #f1e8d8; border-left: 3px solid #b08d57;
+  padding: 1rem 1.3rem; font-size: 0.88rem; color: #4a443c;
+}
+
+.faq-item { border-bottom: 1px solid #e2dbd0; }
+.faq-item summary {
+  cursor: pointer; padding: 1.1rem 2.2rem 1.1rem 0; font-weight: 600;
+  list-style: none; position: relative; color: #211d18;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+"; position: absolute; right: 0.4rem; top: 50%; transform: translateY(-50%);
+  color: #b08d57; font-size: 1.2rem; font-weight: 400;
+}
+.faq-item[open] summary::after { content: "−"; }
+.faq-item .faq-body { padding: 0 0 1.2rem; font-size: 0.92rem; line-height: 1.85; color: #4a443c; }
+
+.breadcrumbs { font-size: 0.76rem; color: #8d857a; }
+.breadcrumbs a { color: #b08d57; }
+.breadcrumbs li { display: inline; }
+.breadcrumbs li + li::before { content: "›"; margin: 0 0.45rem; color: #cbb28c; }
+
+::selection { background: rgba(176, 141, 87, 0.25); }
+
+@media (min-width: 1024px) {
+  .only-mobile { display: none !important; }
+}
