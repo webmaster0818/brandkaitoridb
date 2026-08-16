@@ -28,16 +28,16 @@ const method = [
 ];
 
 const brands = [
-  "エルメス",
-  "ルイヴィトン",
-  "シャネル",
-  "ロレックス",
-  "オメガ",
-  "グッチ",
-  "プラダ",
-  "セリーヌ",
-  "ティファニー",
-  "カルティエ",
+  { name: "エルメス", slug: "hermes" },
+  { name: "ルイヴィトン", slug: "louis-vuitton" },
+  { name: "シャネル", slug: "chanel" },
+  { name: "ロレックス", slug: "rolex" },
+  { name: "オメガ", slug: "omega" },
+  { name: "グッチ", slug: "gucci" },
+  { name: "プラダ", slug: "prada" },
+  { name: "セリーヌ", slug: "celine" },
+  { name: "ティファニー", slug: "tiffany" },
+  { name: "カルティエ", slug: "cartier" },
 ];
 
 export default function SoubaPage() {
@@ -51,7 +51,7 @@ export default function SoubaPage() {
             ブランド別の実売相場データ
           </h1>
           <p className="mt-5 max-w-2xl text-[0.95rem] leading-loose text-ink-soft">
-            当サイトの相場データは、業者の広告に載る「参考買取価格」ではなく、実際に売買が成立した価格だけを集計して作ります。現在は第1弾のデータ収集・検証を進めている段階で、検証が完了したブランドから順次公開します。
+            当サイトの相場データは、業者の広告に載る「参考買取価格」ではなく、実際に売買が成立した価格だけを集計して作ります。第1弾として10ブランドの実売データ（出典・取得日付き）を公開中です。データは定期的に再確認し、更新日を明記します。
           </p>
         </div>
       </section>
@@ -86,10 +86,12 @@ export default function SoubaPage() {
             まずは取引件数が多く相場の物差しとして需要の高い、以下の10ブランドからデータを公開します。数値は検証が完了するまで掲載しません。
           </p>
           <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-5 max-w-4xl">
-            {brands.map((name) => (
-              <li key={name} className="flex items-baseline gap-2.5 text-[0.92rem] text-ink-soft">
+            {brands.map((b) => (
+              <li key={b.slug} className="flex items-baseline gap-2.5 text-[0.92rem] text-ink-soft">
                 <span className="text-gold text-[0.7rem] shrink-0">◆</span>
-                {name}
+                <a href={`/souba/${b.slug}/`} className="underline decoration-gold/40 underline-offset-4 hover:text-gold transition-colors">
+                  {b.name}の実売相場データ
+                </a>
               </li>
             ))}
           </ul>
