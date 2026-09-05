@@ -21,6 +21,7 @@ const zenOldMincho = Zen_Old_Mincho({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  verification: { google: "8-0UJ-S65jqwZykBvoRL5RFJgCJCaNx7MHyBPcj2fNQ" },
   title: {
     default: `${SITE_NAME}｜${SITE_TAGLINE}`,
     template: `%s｜${SITE_NAME}`,
