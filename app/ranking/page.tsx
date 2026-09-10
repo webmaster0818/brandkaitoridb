@@ -27,27 +27,28 @@ const axes = [
   },
 ];
 
-const partners = [
-  "ブランドオフ",
-  "エコスタイル",
-  "コメ兵",
-  "ファーストクラス",
-  "買取大吉",
-  "いくらや",
-  "Librand",
-  "RECLO",
-  "ウリエル",
-  "ゴールドウィン",
-  "Tifana",
-  "あきなや",
-  "ブランドゥール",
-  "ネットオフ",
-  "eあきんど",
-  "カインドオル",
-  "まねきや",
-  "なんぼや",
-  "RIBLA",
-  "ザ・ゴールド",
+// レビュー公開済みは slug を持ち /reviews/ へリンクする。未公開(確認中)は slug: null
+const partners: { name: string; slug: string | null }[] = [
+  { name: "ブランドオフ", slug: "brandoff" },
+  { name: "エコスタイル", slug: "ecostyle" },
+  { name: "コメ兵", slug: "komehyo" },
+  { name: "ファーストクラス", slug: "first-class" },
+  { name: "買取大吉", slug: "kaitori-daikichi" },
+  { name: "いくらや", slug: "ikuraya" },
+  { name: "Librand", slug: "librand" },
+  { name: "RECLO", slug: "reclo" },
+  { name: "ウリエル", slug: "uriel" },
+  { name: "ゴールドウィン", slug: null },
+  { name: "Tifana", slug: "tifana" },
+  { name: "あきなや", slug: "akinaya" },
+  { name: "ブランドゥール", slug: "brandoule" },
+  { name: "ネットオフ", slug: "netoff" },
+  { name: "eあきんど", slug: null },
+  { name: "カインドオル", slug: "kindal" },
+  { name: "まねきや", slug: "manekiya" },
+  { name: "なんぼや", slug: "nanboya" },
+  { name: "RIBLA", slug: "ribla" },
+  { name: "ザ・ゴールド", slug: "the-gold" },
 ];
 
 const aggregators = ["おいくら", "ヒカカク", "みんなの買取"];
@@ -91,18 +92,24 @@ export default function RankingPage() {
         </div>
       </section>
 
-      {/* 掲載予定の業者 */}
+      {/* 掲載業者 */}
       <section className="bg-ivory-deep border-y border-line">
         <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-          <h2 className="rule-gold text-2xl text-ink mb-4">掲載予定の業者</h2>
+          <h2 className="rule-gold text-2xl text-ink mb-4">掲載業者</h2>
           <p className="max-w-3xl text-[0.92rem] leading-relaxed text-ink-soft mb-8">
-            以下は当サイトでレビュー掲載を予定している買取業者です。現在、各社の公式情報の確認作業を進めており、確認が完了した業者から順次レビューとリンクを公開します。
+            公式サイトでの確認・検証が完了した業者からレビューを公開しています。リンクのある業者はレビュー公開済みです（残りは現在確認中）。
           </p>
           <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-4 max-w-4xl">
-            {partners.map((name) => (
-              <li key={name} className="flex items-baseline gap-2.5 text-[0.92rem] text-ink-soft">
+            {partners.map((p) => (
+              <li key={p.name} className="flex items-baseline gap-2.5 text-[0.92rem] text-ink-soft">
                 <span className="text-gold text-[0.7rem] shrink-0">◆</span>
-                {name}
+                {p.slug ? (
+                  <a href={`/reviews/${p.slug}/`} className="underline decoration-gold/50 underline-offset-4 hover:text-ink">
+                    {p.name}
+                  </a>
+                ) : (
+                  p.name
+                )}
               </li>
             ))}
           </ul>
@@ -121,7 +128,7 @@ export default function RankingPage() {
           </ul>
 
           <div className="note-box mt-10 max-w-3xl">
-            ここに掲載した名称は「掲載予定」の段階であり、当サイトによる評価・推奨を意味するものではありません。各社へのリンクは、提携（アフィリエイト計測リンク）の受領とレビュー内容の検証が完了したものから順次公開します。
+            掲載順・掲載の有無は当サイトによる評価・推奨を意味するものではありません。レビューは公式サイトで確認できた事実の整理であり、各社公式サイトへのリンク（アフィリエイト計測リンク）は提携完了後に順次設置します。
           </div>
         </div>
       </section>
@@ -129,9 +136,9 @@ export default function RankingPage() {
       {/* 次のアクション */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
         <div className="max-w-3xl">
-          <h2 className="rule-gold text-2xl text-ink mb-6">レビュー公開までにできる準備</h2>
+          <h2 className="rule-gold text-2xl text-ink mb-6">比較の前にできる準備</h2>
           <p className="text-[0.92rem] leading-relaxed text-ink-soft mb-8">
-            業者比較の前提になるのは「相場を知ること」と「売り方を決めること」です。以下の2つを先に読んでおくと、レビュー公開後にすぐ比較検討に入れます。
+            業者比較の前提になるのは「相場を知ること」と「売り方を決めること」です。以下の2つを先に読んでおくと、レビューを比較の道具として使えるようになります。
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="/souba/" className="btn-gold">実売相場データを見る</a>

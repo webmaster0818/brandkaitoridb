@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "../lib/site";
+import { REVIEWS } from "../lib/reviews";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "業者レビュー一覧",
   description:
-    "ブランド買取業者のレビューを、公式サイトで確認した事実と確認日つきで公開するハブページ。架空の口コミを作らない方針と、レビューの読み方を説明します。",
+    "ブランド買取業者のレビューを、公式サイトで確認した事実と確認日つきで公開するハブページ。買取方法・手数料・古物商許可を一次確認した業者から順に掲載しています。",
   alternates: { canonical: `${SITE_URL}/reviews/` },
 };
 
@@ -55,21 +56,28 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      {/* 公開状況 */}
+      {/* 公開済みレビュー */}
       <section className="bg-ivory-deep border-y border-line">
         <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-          <div className="max-w-3xl">
-            <h2 className="rule-gold text-2xl text-ink mb-6">公開状況 — 順次公開の準備中です</h2>
-            <p className="text-[0.92rem] leading-relaxed text-ink-soft mb-4">
-              現在、掲載予定の各社について公式情報の確認を進めています。確認と検証が完了した業者から、このページにレビューを追加していきます。まだ1件も公開していない段階で「おすすめ」を語ることはしません。
-            </p>
-            <p className="text-[0.92rem] leading-relaxed text-ink-soft mb-8">
-              レビュー掲載を予定している業者の一覧は、業者比較ページにまとめています。
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="/ranking/" className="btn-gold">掲載予定の業者一覧を見る</a>
-              <a href="/verification-policy/" className="btn-line">検証ポリシーを読む</a>
-            </div>
+          <h2 className="rule-gold text-2xl text-ink mb-4">公開済みのレビュー（{REVIEWS.length}社）</h2>
+          <p className="max-w-3xl text-[0.92rem] leading-relaxed text-ink-soft mb-10">
+            各社の公式サイトを直接確認し、運営会社・古物商許可・買取方法・手数料を照合できた業者から公開しています。確認できなかった項目は、各レビュー内で「確認できなかったこと」として明記しています。
+          </p>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {REVIEWS.map((r) => (
+              <a key={r.slug} href={`/reviews/${r.slug}/`} className="card-lux p-6 block">
+                <p className="eyebrow mb-2">{r.methods.join(" · ")}</p>
+                <h3 className="text-lg text-ink mb-2">{r.name}</h3>
+                <p className="text-[0.82rem] leading-relaxed text-ink-soft mb-3">
+                  {r.company} ／ {r.genres.slice(0, 3).join("・")}ほか
+                </p>
+                <p className="text-[0.75rem] text-muted">公式サイト確認日: {r.confirmedAt}</p>
+              </a>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a href="/ranking/" className="btn-gold">比較の考え方を見る</a>
+            <a href="/verification-policy/" className="btn-line">検証ポリシーを読む</a>
           </div>
         </div>
       </section>
