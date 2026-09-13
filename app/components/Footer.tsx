@@ -16,6 +16,8 @@ export default function Footer() {
         { href: "/guide/", label: "初めての方へ" },
         { href: "/guide/houhou/", label: "出張・宅配・店頭の違い" },
         { href: "/guide/cooling-off/", label: "訪問購入のクーリングオフ" },
+        { href: "/guide/watch/", label: "腕時計を高く売る実務" },
+        { href: "/guide/bag/", label: "バッグを高く売る実務" },
       ],
     },
     {

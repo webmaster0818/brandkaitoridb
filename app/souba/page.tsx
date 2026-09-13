@@ -5,7 +5,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "ブランド別の実売相場データ",
   description:
-    "「参考買取価格」ではなく、実際に売買が成立した価格をもとにブランド別の相場を公開するハブページ。データの計測方法と、第1弾で公開予定の10ブランドを紹介します。",
+    "「参考買取価格」ではなく、実際に売買が成立した価格をもとにブランド別の相場を公開するハブページ。データの計測方法と、公開中の20ブランド（バッグ・時計・ジュエリー）の実売データを案内します。",
   alternates: { canonical: `${SITE_URL}/souba/` },
 };
 
@@ -25,6 +25,19 @@ const method = [
     title: "レンジとして公開",
     body: "1点の事例を「相場」と呼ぶことはせず、件数・平均・最高値をレンジとして公開します。数値には必ず出典と取得日を添えます。",
   },
+];
+
+const brands2 = [
+  { name: "ディオール", slug: "dior" },
+  { name: "フェンディ", slug: "fendi" },
+  { name: "ボッテガ・ヴェネタ", slug: "bottega-veneta" },
+  { name: "ロエベ", slug: "loewe" },
+  { name: "サンローラン", slug: "saint-laurent" },
+  { name: "バレンシアガ", slug: "balenciaga" },
+  { name: "ゴヤール", slug: "goyard" },
+  { name: "ブルガリ", slug: "bvlgari" },
+  { name: "タグホイヤー", slug: "tag-heuer" },
+  { name: "グランドセイコー", slug: "grand-seiko" },
 ];
 
 const brands = [
@@ -51,7 +64,7 @@ export default function SoubaPage() {
             ブランド別の実売相場データ
           </h1>
           <p className="mt-5 max-w-2xl text-[0.95rem] leading-loose text-ink-soft">
-            当サイトの相場データは、業者の広告に載る「参考買取価格」ではなく、実際に売買が成立した価格だけを集計して作ります。第1弾として10ブランドの実売データ（出典・取得日付き）を公開中です。データは定期的に再確認し、更新日を明記します。
+            当サイトの相場データは、業者の広告に載る「参考買取価格」ではなく、実際に売買が成立した価格だけを集計して作ります。第1弾10ブランド（2026年8月）に続き、第2弾10ブランド（2026年9月）を追加し、計20ブランドの実売データ（出典・取得日付き）を公開中です。データは定期的に再確認し、更新日を明記します。
           </p>
         </div>
       </section>
@@ -81,12 +94,26 @@ export default function SoubaPage() {
       {/* 公開予定ブランド */}
       <section className="bg-ivory-deep border-y border-line">
         <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-          <h2 className="rule-gold text-2xl text-ink mb-4">第1弾で公開予定の10ブランド</h2>
+          <h2 className="rule-gold text-2xl text-ink mb-4">第1弾の10ブランド（2026年8月取得）</h2>
           <p className="max-w-3xl text-[0.92rem] leading-relaxed text-ink-soft mb-8">
-            まずは取引件数が多く相場の物差しとして需要の高い、以下の10ブランドからデータを公開します。数値は検証が完了するまで掲載しません。
+            取引件数が多く相場の物差しとして需要の高い10ブランドです。数値は出典ページとの照合が完了したものだけを掲載しています。
           </p>
           <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-5 max-w-4xl">
             {brands.map((b) => (
+              <li key={b.slug} className="flex items-baseline gap-2.5 text-[0.92rem] text-ink-soft">
+                <span className="text-gold text-[0.7rem] shrink-0">◆</span>
+                <a href={`/souba/${b.slug}/`} className="underline decoration-gold/40 underline-offset-4 hover:text-gold transition-colors">
+                  {b.name}の実売相場データ
+                </a>
+              </li>
+            ))}
+          </ul>
+          <h2 className="rule-gold text-2xl text-ink mt-14 mb-4">第2弾の10ブランド（2026年9月取得）</h2>
+          <p className="max-w-3xl text-[0.92rem] leading-relaxed text-ink-soft mb-8">
+            バッグ主体の7ブランドに、ジュエリーと時計の3ブランドを加えました。第1弾と同じく、オークファンの集計値とYahoo!オークションの落札一覧を照合し、まとめ売り・他ブランド品を除いた単品の最高値だけを掲載しています。
+          </p>
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-5 max-w-4xl">
+            {brands2.map((b) => (
               <li key={b.slug} className="flex items-baseline gap-2.5 text-[0.92rem] text-ink-soft">
                 <span className="text-gold text-[0.7rem] shrink-0">◆</span>
                 <a href={`/souba/${b.slug}/`} className="underline decoration-gold/40 underline-offset-4 hover:text-gold transition-colors">
