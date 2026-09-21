@@ -3,7 +3,7 @@ import { SITE_URL } from "../../lib/site";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "カルティエの実売相場データ【2026年8月】",
+  title: "カルティエの実売相場データ｜買取相場の目安【2026年8月取得】",
   description:
     "カルティエの時計・リング・ネックレスについて、オークションで実際に売買が成立した価格を集計。直近30日の件数・平均落札価格・最高値を出典つきで公開します。",
   alternates: { canonical: `${SITE_URL}/souba/cartier/` },

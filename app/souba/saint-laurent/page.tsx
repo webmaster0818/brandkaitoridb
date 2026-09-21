@@ -3,7 +3,7 @@ import { SITE_URL } from "../../lib/site";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "サンローランの実売相場データ【2026年9月】",
+  title: "サンローランの実売相場データ｜買取相場の目安【2026年9月】",
   description:
     "サンローランのバッグ・財布・ライダース・ケイトについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典つきで公開します。",
   alternates: { canonical: `${SITE_URL}/souba/saint-laurent/` },

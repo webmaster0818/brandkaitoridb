@@ -3,7 +3,7 @@ import { SITE_URL } from "../../lib/site";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "シャネルの実売相場データ【2026年8月】",
+  title: "シャネルの実売相場データ｜買取相場の目安【2026年9月更新】",
   description:
     "シャネルのマトラッセ・バッグ・財布について、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典つきで公開します。査定前の物差しにどうぞ。",
   alternates: { canonical: `${SITE_URL}/souba/chanel/` },
@@ -53,6 +53,47 @@ const rows = [
     aucfanUrl: "https://aucfan.com/intro/q-~a5b7a5e3a5cda5eb20bae2c9db/",
     yahooUrl:
       "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%82%B7%E3%83%A3%E3%83%8D%E3%83%AB%20%E8%B2%A1%E5%B8%83/0/",
+  },
+];
+
+// 型番・サイズ別の実売データ（取得日2026年9月21日・P1追補）
+// 件数・平均＝オークファン落札相場ページの表示値／最高＝Yahoo!オークション落札一覧を落札価格順に確認した単品出品の最上位（まとめ売り・フリマ出品・関連小物は除外）
+const modelRows = [
+  {
+    category: "マトラッセ 25",
+    count: "28件（直近30日）",
+    avg: "308,559円",
+    max: "1,210,000円",
+    maxNote: "マトラッセ25 Wフラップ デニムグラデーション A01112（未使用・単品出品）。落札日2026年9月12日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5b7a5e3a5cda5eb20a5dea5c8a5e9a5c3a5bb203235/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%82%B7%E3%83%A3%E3%83%8D%E3%83%AB%20%E3%83%9E%E3%83%88%E3%83%A9%E3%83%83%E3%82%BB%2025/0/",
+  },
+  {
+    category: "マトラッセ 23",
+    count: "24件（直近30日）",
+    avg: "78,076円",
+    max: "648,000円",
+    maxNote: "マトラッセ23 ダブルフラップ キャビアスキン A01113（中古・単品出品）。落札日2026年8月14日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5b7a5e3a5cda5eb20a5dea5c8a5e9a5c3a5bb203233/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%82%B7%E3%83%A3%E3%83%8D%E3%83%AB%20%E3%83%9E%E3%83%88%E3%83%A9%E3%83%83%E3%82%BB%2023/0/",
+  },
+  {
+    category: "ミニマトラッセ",
+    count: "31件（直近30日）",
+    avg: "221,539円",
+    max: "781,990円",
+    maxNote: "ミニマトラッセ チェーンショルダー キャビアスキン ベビーピンク（中古・単品出品）。落札日2026年6月13日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5b7a5e3a5cda5eb20a5dfa5cba5dea5c8a5e9a5c3a5bb/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%82%B7%E3%83%A3%E3%83%8D%E3%83%AB%20%E3%83%9F%E3%83%8B%E3%83%9E%E3%83%88%E3%83%A9%E3%83%83%E3%82%BB/0/",
+  },
+  {
+    category: "マトラッセ 財布",
+    count: "137件（直近30日）",
+    avg: "34,059円",
+    max: "377,245円",
+    maxNote: "マトラッセ チェーンウォレット ラムスキン 31番台（未使用・単品出品）。落札日2026年7月9日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5b7a5e3a5cda5eb20a5dea5c8a5e9a5c3a5bb20bae2c9db/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%82%B7%E3%83%A3%E3%83%8D%E3%83%AB%20%E3%83%9E%E3%83%88%E3%83%A9%E3%83%83%E3%82%BB%20%E8%B2%A1%E5%B8%83/0/",
   },
 ];
 
@@ -146,6 +187,52 @@ export default function ChanelSoubaPage() {
             ※出典：オークファン（aucfan.com）各キーワードの落札相場ページ、およびYahoo!オークション落札相場（過去120日）。取得日：2026年8月17日。
           </li>
         </ul>
+      </section>
+
+
+      {/* 型番・サイズ別（P1・2026-09-21追補） */}
+      <section className="bg-ivory-deep border-y border-line" id="models">
+        <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
+          <h2 className="rule-gold text-2xl text-ink mb-4">型番・サイズ別の実売データ — 買取相場の目安</h2>
+          <p className="max-w-3xl text-[0.9rem] leading-relaxed text-ink-soft mb-8">
+            マトラッセをサイズ・型番別に集計しました。25（A01112）は未使用のキャビアスキン・デニムが110〜121万円、23（A01113）は中古が57〜65万円、ミニは72〜78万円が上限です。平均値は23が7.8万円と低く見えますが、キーワード集計にストラップ・チャーム等の周辺出品が含まれるためで、本体はレンジの上側が目安です。財布はチェーンウォレットが30万円台で上限を作ります。
+            取得日はいずれも2026年9月21日です。
+          </p>
+          <div className="overflow-x-auto">
+            <table className="table-lux min-w-[760px]">
+              <thead>
+                <tr>
+                  <th>型番・サイズ</th>
+                  <th>落札件数（集計期間）</th>
+                  <th>平均落札価格</th>
+                  <th>最高落札価格（単品）</th>
+                  <th>出典</th>
+                </tr>
+              </thead>
+              <tbody>
+                {modelRows.map((r) => (
+                  <tr key={r.category}>
+                    <td className="font-bold text-ink">{r.category}</td>
+                    <td>{r.count}</td>
+                    <td>{r.avg}</td>
+                    <td>{r.max}</td>
+                    <td className="whitespace-nowrap">
+                      <a href={r.aucfanUrl} target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-2">オークファン</a>
+                      {" / "}
+                      <a href={r.yahooUrl} target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-2">ヤフオク</a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <ul className="mt-4 space-y-1 text-[0.8rem] text-muted">
+            {modelRows.map((r) => (
+              <li key={r.category}>※{r.category}の最高落札価格の内訳：{r.maxNote}。</li>
+            ))}
+            <li>※型番・サイズのキーワード集計には、関連する小物・パーツ・状態不良品も含まれます。平均値は「状態の良い本体の相場」ではなく、最高値は素材・状態の特殊例を含みます。買取査定額は実売より低くなるのが一般的です。</li>
+          </ul>
+        </div>
       </section>
 
       {/* データの読み方 */}

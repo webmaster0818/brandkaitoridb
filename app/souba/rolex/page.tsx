@@ -3,7 +3,7 @@ import { SITE_URL } from "../../lib/site";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "ロレックスの実売相場データ【2026年8月】",
+  title: "ロレックスの実売相場データ｜買取相場の目安【2026年9月更新】",
   description:
     "ロレックスのデイトナ・サブマリーナ・デイトジャスト・エクスプローラーについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典つきで公開します。",
   alternates: { canonical: `${SITE_URL}/souba/rolex/` },
@@ -63,6 +63,47 @@ const rows = [
     aucfanUrl: "https://aucfan.com/intro/q-~a5eda5eca5c3a5afa5b920a5a8a5afa5b9a5d7a5eda1bca5e9a1bc/",
     yahooUrl:
       "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%83%AD%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%20%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%97%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC/0/",
+  },
+];
+
+// 型番・サイズ別の実売データ（取得日2026年9月21日・P1追補）
+// 件数・平均＝オークファン落札相場ページの表示値／最高＝Yahoo!オークション落札一覧を落札価格順に確認した単品出品の最上位（まとめ売り・フリマ出品・関連小物は除外）
+const modelRows = [
+  {
+    category: "デイトナ 116500",
+    count: "4件（直近30日）",
+    avg: "345,000円",
+    max: "3,197,700円",
+    maxNote: "デイトナ 116500LN（中古・単品出品）。これに続く落札はカスタム品・社外補修品を含むため注記。直近30日の落札は4件。落札日2026年7月21日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5eda5eca5c3a5afa5b920313136353030/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%83%AD%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%20116500/0/",
+  },
+  {
+    category: "サブマリーナ 126610",
+    count: "1件（直近30日）",
+    avg: "2,034,546円",
+    max: "2,238,000円",
+    maxNote: "サブマリーナ デイト 126610LN ランダム番（中古・単品出品）。直近30日の落札は1件のため平均は同一個体。落札日2026年9月17日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5eda5eca5c3a5afa5b920313236363130/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%83%AD%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%20126610/0/",
+  },
+  {
+    category: "サブマリーナ 116610",
+    count: "6件（直近30日）",
+    avg: "332,898円",
+    max: "1,978,000円",
+    maxNote: "サブマリーナ デイト 116610LN 箱・保証書付き（中古・美品・単品出品）。落札日2026年7月27日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5eda5eca5c3a5afa5b920313136363130/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%83%AD%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%20116610/0/",
+  },
+  {
+    category: "サブマリーナ 16610",
+    count: "44件（直近30日）",
+    avg: "187,503円",
+    max: "2,201,100円",
+    maxNote: "サブマリーナ 16610LV グリーンベゼル M番（中古・単品出品）。ノーマルの16610は1,734,600円（E番・中古）。落札日2026年7月5日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5eda5eca5c3a5afa5b9203136363130/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%83%AD%E3%83%AC%E3%83%83%E3%82%AF%E3%82%B9%2016610/0/",
   },
 ];
 
@@ -153,6 +194,52 @@ export default function RolexSoubaPage() {
             ※出典：オークファン（aucfan.com）各キーワードの落札相場ページ、およびYahoo!オークション落札相場（過去120日）。取得日：2026年8月17日。
           </li>
         </ul>
+      </section>
+
+
+      {/* 型番・サイズ別（P1・2026-09-21追補） */}
+      <section className="bg-ivory-deep border-y border-line" id="models">
+        <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
+          <h2 className="rule-gold text-2xl text-ink mb-4">型番・サイズ別の実売データ — 買取相場の目安</h2>
+          <p className="max-w-3xl text-[0.9rem] leading-relaxed text-ink-soft mb-8">
+            主要リファレンス別に集計しました。件数は各1〜44件と少なく（現行リファレンスは中古流通自体が薄い）、平均値は少数の落札で動きます。116500LNは純正品か社外補修品・カスタム品かで100万円以上の差があり、出品タイトルの記載を必ず確認してください。16610はグリーンベゼル（16610LV）が220万円、ノーマルが173万円台と、同じリファレンスでもベゼル色で価格帯が分かれます。
+            取得日はいずれも2026年9月21日です。
+          </p>
+          <div className="overflow-x-auto">
+            <table className="table-lux min-w-[760px]">
+              <thead>
+                <tr>
+                  <th>型番・サイズ</th>
+                  <th>落札件数（集計期間）</th>
+                  <th>平均落札価格</th>
+                  <th>最高落札価格（単品）</th>
+                  <th>出典</th>
+                </tr>
+              </thead>
+              <tbody>
+                {modelRows.map((r) => (
+                  <tr key={r.category}>
+                    <td className="font-bold text-ink">{r.category}</td>
+                    <td>{r.count}</td>
+                    <td>{r.avg}</td>
+                    <td>{r.max}</td>
+                    <td className="whitespace-nowrap">
+                      <a href={r.aucfanUrl} target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-2">オークファン</a>
+                      {" / "}
+                      <a href={r.yahooUrl} target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-2">ヤフオク</a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <ul className="mt-4 space-y-1 text-[0.8rem] text-muted">
+            {modelRows.map((r) => (
+              <li key={r.category}>※{r.category}の最高落札価格の内訳：{r.maxNote}。</li>
+            ))}
+            <li>※型番・サイズのキーワード集計には、関連する小物・パーツ・状態不良品も含まれます。平均値は「状態の良い本体の相場」ではなく、最高値は素材・状態の特殊例を含みます。買取査定額は実売より低くなるのが一般的です。</li>
+          </ul>
+        </div>
       </section>
 
       {/* データの読み方 */}

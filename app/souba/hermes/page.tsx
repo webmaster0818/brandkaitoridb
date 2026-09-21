@@ -3,7 +3,7 @@ import { SITE_URL } from "../../lib/site";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "エルメスの実売相場データ【2026年8月】",
+  title: "エルメスの実売相場データ｜買取相場の目安【2026年9月更新】",
   description:
     "エルメスのバーキン・ケリー・財布・スカーフについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典つきで公開します。査定前の物差しにどうぞ。",
   alternates: { canonical: `${SITE_URL}/souba/hermes/` },
@@ -61,6 +61,47 @@ const rows = [
     aucfanUrl: "https://aucfan.com/intro/q-~a5a8a5eba5e1a5b920a5b9a5aba1bca5d5/",
     yahooUrl:
       "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%82%A8%E3%83%AB%E3%83%A1%E3%82%B9%20%E3%82%B9%E3%82%AB%E3%83%BC%E3%83%95/0/",
+  },
+];
+
+// 型番・サイズ別の実売データ（取得日2026年9月21日・P1追補）
+// 件数・平均＝オークファン落札相場ページの表示値／最高＝Yahoo!オークション落札一覧を落札価格順に確認した単品出品の最上位（まとめ売り・フリマ出品・関連小物は除外）
+const modelRows = [
+  {
+    category: "バーキン25",
+    count: "30件（直近30日）",
+    avg: "33,206円",
+    max: "4,015,000円",
+    maxNote: "バーキン25 トゴ ブラック ゴールド金具 Z刻印（新品同様・単品出品）。落札日2026年4月22日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5a8a5eba5e1a5b920a5d0a1bca5ada5f33235/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%82%A8%E3%83%AB%E3%83%A1%E3%82%B9%20%E3%83%90%E3%83%BC%E3%82%AD%E3%83%B325/0/",
+  },
+  {
+    category: "バーキン30",
+    count: "17件（直近30日）",
+    avg: "13,353円",
+    max: "2,200,000円",
+    maxNote: "バーキン30 オーストリッチ 内縫い □I刻印（中古・美品）。希少素材のため通常レザーの上限とは別物。落札日2026年7月26日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5a8a5eba5e1a5b920a5d0a1bca5ada5f33330/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%82%A8%E3%83%AB%E3%83%A1%E3%82%B9%20%E3%83%90%E3%83%BC%E3%82%AD%E3%83%B330/0/",
+  },
+  {
+    category: "バーキン35",
+    count: "12件（直近30日）",
+    avg: "21,668円",
+    max: "2,134,000円",
+    maxNote: "バーキン35 トゴ ノワール ゴールド金具 □O刻印（中古・美品）。落札日2026年8月6日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5a8a5eba5e1a5b920a5d0a1bca5ada5f33335/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%82%A8%E3%83%AB%E3%83%A1%E3%82%B9%20%E3%83%90%E3%83%BC%E3%82%AD%E3%83%B335/0/",
+  },
+  {
+    category: "バーキン40",
+    count: "3件（直近30日）",
+    avg: "25,300円",
+    max: "3,580,000円",
+    maxNote: "バーキン40 トゴ ブラック Z刻印 付属品完備（未使用・単品出品）。直近30日の落札は3件のみ。落札日2026年7月9日",
+    aucfanUrl: "https://aucfan.com/intro/q-~a5a8a5eba5e1a5b920a5d0a1bca5ada5f33430/",
+    yahooUrl: "https://auctions.yahoo.co.jp/closedsearch/closedsearch/%E3%82%A8%E3%83%AB%E3%83%A1%E3%82%B9%20%E3%83%90%E3%83%BC%E3%82%AD%E3%83%B340/0/",
   },
 ];
 
@@ -151,6 +192,52 @@ export default function HermesSoubaPage() {
             ※出典：オークファン（aucfan.com）各キーワードの落札相場ページ、およびYahoo!オークション落札相場（過去120日）。取得日：2026年8月17日。
           </li>
         </ul>
+      </section>
+
+
+      {/* 型番・サイズ別（P1・2026-09-21追補） */}
+      <section className="bg-ivory-deep border-y border-line" id="models">
+        <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
+          <h2 className="rule-gold text-2xl text-ink mb-4">型番・サイズ別の実売データ — 買取相場の目安</h2>
+          <p className="max-w-3xl text-[0.9rem] leading-relaxed text-ink-soft mb-8">
+            バーキンをサイズ別に集計しました。落札件数は各サイズ3〜30件と少なく、平均値にはカデナ・チャーム・スカーフなどバーキン関連の周辺出品が含まれるため本体の相場ではありません。単品最高値は25が新品同様のトゴで401.5万円、30は希少素材（オーストリッチ）、40は未使用のトゴで358万円と、サイズより素材と状態が価格を決めています。
+            取得日はいずれも2026年9月21日です。
+          </p>
+          <div className="overflow-x-auto">
+            <table className="table-lux min-w-[760px]">
+              <thead>
+                <tr>
+                  <th>型番・サイズ</th>
+                  <th>落札件数（集計期間）</th>
+                  <th>平均落札価格</th>
+                  <th>最高落札価格（単品）</th>
+                  <th>出典</th>
+                </tr>
+              </thead>
+              <tbody>
+                {modelRows.map((r) => (
+                  <tr key={r.category}>
+                    <td className="font-bold text-ink">{r.category}</td>
+                    <td>{r.count}</td>
+                    <td>{r.avg}</td>
+                    <td>{r.max}</td>
+                    <td className="whitespace-nowrap">
+                      <a href={r.aucfanUrl} target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-2">オークファン</a>
+                      {" / "}
+                      <a href={r.yahooUrl} target="_blank" rel="noopener noreferrer" className="text-gold underline underline-offset-2">ヤフオク</a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <ul className="mt-4 space-y-1 text-[0.8rem] text-muted">
+            {modelRows.map((r) => (
+              <li key={r.category}>※{r.category}の最高落札価格の内訳：{r.maxNote}。</li>
+            ))}
+            <li>※型番・サイズのキーワード集計には、関連する小物・パーツ・状態不良品も含まれます。平均値は「状態の良い本体の相場」ではなく、最高値は素材・状態の特殊例を含みます。買取査定額は実売より低くなるのが一般的です。</li>
+          </ul>
+        </div>
       </section>
 
       {/* データの読み方 */}
