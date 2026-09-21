@@ -17,8 +17,8 @@ export async function generateMetadata({
   const r = REVIEWS.find((x) => x.slug === slug);
   if (!r) return {};
   return {
-    title: `${r.name}のブランド買取を公式情報で検証【${r.confirmedAt.replace(/(\d+年\d+月).*/, "$1")}確認】`,
-    description: `${r.name}(${r.company})の買取方法・手数料・古物商許可を公式サイトで一次確認して整理。確認できなかった項目も正直に記載します。架空の口コミは掲載しません。`,
+    title: `${r.name}の口コミ・評判は？買取方法・手数料・古物商許可を公式情報で検証【${r.confirmedAt.replace(/(\d+年\d+月).*/, "$1")}確認】`,
+    description: `${r.name}（${r.company}）の口コミ・評判を調べる前に押さえたい買取方法・手数料・古物商許可・店舗網を公式サイトで一次確認して整理。買取不可品や返送料など確認できなかった項目も正直に記載し、口コミの読み方まで案内します。架空の口コミは掲載しません。`,
     alternates: { canonical: `${SITE_URL}/reviews/${r.slug}/` },
   };
 }
@@ -33,6 +33,33 @@ export default async function ReviewDetailPage({
   const { slug } = await params;
   const r = REVIEWS.find((x) => x.slug === slug);
   if (!r) notFound();
+
+  const methodsText = r.methods.join("・");
+  const faqs = [
+    {
+      q: `${r.name}の口コミ・評判はどう読めばいいですか？`,
+      a: `当サイトは架空の口コミを作成しないため、利用者の声そのものは掲載していません。口コミを読むときは、自分と同じ品目（例：${r.genres.slice(0, 2).join("・")}）・同じ買取方法（${methodsText}）の投稿を探し、良い評価と悪い評価の両方を確認してください。手数料・買取方法・古物商許可といった公式に確認できる事実は、このページに確認日（${r.confirmedAt}）つきで整理しています。`,
+    },
+    {
+      q: `${r.name}の買取方法は何がありますか？`,
+      a: `公式サイトに明記があるのは「${methodsText}」です（当サイト確認日 ${r.confirmedAt}）。${r.storesNote ? `店舗については「${r.storesNote}」と記載されています。` : "店舗網については公式サイト上で確認できませんでした。"}方法によって送料・返送料・出張エリアの条件が異なるため、申込み前に公式サイトで最新の条件をご確認ください。`,
+    },
+    {
+      q: `${r.name}の手数料や送料はかかりますか？`,
+      a: r.fees
+        ? `公式サイトの記載は次のとおりです：${r.fees}${r.unconfirmed.length ? ` なお「${r.unconfirmed[0]}」は公式サイト上で明示記載を確認できませんでした。` : ""}`
+        : `手数料・送料の条件は公式サイト上で明確な記載を確認できませんでした。査定前に直接確認することをおすすめします。`,
+    },
+    {
+      q: `${r.name}は信頼できる業者ですか？（古物商許可・運営会社）`,
+      a: `運営会社は${r.company}で、古物商許可は${r.license ? `「${r.license}」として公式サイトに表示されています` : "公式サイト上で確認できませんでした"}（当サイト確認日 ${r.confirmedAt}）。当サイトは公式サイトの実ページで運営会社名と許可番号を確認できた業者のみを掲載しています。信頼性の最終判断は、査定時の対応・書面の条件・相見積もりでの比較とあわせて行ってください。`,
+    },
+  ];
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  };
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -50,13 +77,14 @@ export default async function ReviewDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-5 pt-10 pb-12 md:pt-14 md:pb-16">
           <Breadcrumbs items={[{ label: "業者レビュー", href: "/reviews/" }, { label: r.name }]} />
           <p className="eyebrow mt-8 mb-4">REVIEW — VERIFIED FACTS</p>
           <h1 className="text-3xl md:text-4xl leading-snug text-ink">
-            {r.name}のブランド買取を公式情報で検証
+            {r.name}の口コミ・評判は？ブランド買取を公式情報で検証
           </h1>
           <p className="mt-5 max-w-2xl text-[0.95rem] leading-loose text-ink-soft">
             このページの情報は、{r.name}の公式サイトを当サイトが直接確認して整理したものです（確認日: {r.confirmedAt}）。伝聞や口コミサイトからの引用はしていません。確認できなかった項目は「確認できなかったこと」として正直に記載します。
@@ -214,6 +242,21 @@ export default async function ReviewDetailPage({
           </div>
         </section>
       )}
+
+      {/* FAQ（口コミ・評判意図の受け皿・2026-09-21） */}
+      <section className="bg-ivory-deep border-y border-line">
+        <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
+          <div className="max-w-3xl">
+            <h2 className="rule-gold text-2xl text-ink mb-6">{r.name}の口コミ・評判に関するよくある質問</h2>
+            {faqs.map((f) => (
+              <details key={f.q} className="faq-item">
+                <summary>{f.q}</summary>
+                <div className="faq-body">{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 関連導線 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
