@@ -18,6 +18,11 @@ export default function Footer() {
         { href: "/guide/cooling-off/", label: "訪問購入のクーリングオフ" },
         { href: "/guide/watch/", label: "腕時計を高く売る実務" },
         { href: "/guide/bag/", label: "バッグを高く売る実務" },
+        { href: "/guide/wallet/", label: "財布を高く売る実務" },
+        { href: "/guide/shoes/", label: "靴・スニーカーを高く売る実務" },
+        { href: "/guide/no-box/", label: "箱なし・付属品なしで売る" },
+        { href: "/guide/damaged/", label: "傷・使用感のある品を売る" },
+        { href: "/guide/not-accepted/", label: "買取不可になるもの" },
       ],
     },
     {
