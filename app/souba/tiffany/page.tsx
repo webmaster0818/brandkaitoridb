@@ -173,6 +173,11 @@ export default function TiffanySoubaPage() {
             当サイトの相場データは「実売価格の収集 → データのクリーニング → レンジとして公開」の3ステップで作成し、数値には必ず出典と取得日を添えます。詳しい方針は実売相場ハブでご確認ください。
           </p>
           <a href="/souba/" className="btn-line">実売相場データの作り方を見る</a>
+          <p className="mt-8 text-sm font-bold text-ink">ジュエリーブランドの実売相場</p>
+          <div className="mt-3 flex flex-wrap gap-3">
+            <a href="/souba/cartier/" className="btn-line">カルティエの実売相場</a>
+            <a href="/souba/bvlgari/" className="btn-line">ブルガリの実売相場</a>
+          </div>
         </div>
       </section>
     </main>
