@@ -3,7 +3,7 @@ import { SITE_URL } from "../../lib/site";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "ルイヴィトンの実売相場データ｜買取相場の目安【2026年9月更新】",
+  title: "ルイヴィトンの買取相場はいくら？バッグ・財布の実売データで見る目安【2026年9月更新】",
   description:
     "ルイヴィトンのバッグ・財布・モノグラムラインについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典つきで公開します。査定前の物差しにどうぞ。",
   alternates: { canonical: `${SITE_URL}/souba/louis-vuitton/` },
@@ -139,6 +139,15 @@ export default function LouisVuittonSoubaPage() {
           <p className="mt-5 max-w-2xl text-[0.95rem] leading-loose text-ink-soft">
             業者の広告に載る「参考買取価格」ではなく、オークションで実際に売買が成立した価格だけを集計しました。ルイヴィトンは中古市場で最も流通量が多いブランドのひとつで、バッグ・財布だけで直近30日に7,000件を超える売買が確認できます。査定に出す前の「相場の物差し」としてお使いください。
           </p>
+          <div className="card-lux mt-8 max-w-3xl p-6">
+            <p className="font-bold text-ink mb-3">ルイヴィトンの相場はいくら？（先に結論）</p>
+            <ul className="space-y-1.5 text-[0.9rem] leading-relaxed text-ink-soft">
+              <li>バッグ全体の平均落札価格は<strong className="text-ink">47,451円</strong>、財布全体は<strong className="text-ink">58,978円</strong>（直近30日・2026年8月17日取得）</li>
+              <li>人気モデルはネヴァーフル<strong className="text-ink">85,416円</strong>、スピーディ<strong className="text-ink">81,539円</strong>が平均（2026年9月21日取得）</li>
+              <li>モノグラムの財布に絞ると平均<strong className="text-ink">14,142円</strong>。同じ「財布」でもラインや素材で大きく変わります</li>
+            </ul>
+            <p className="mt-3 text-[0.8rem] text-ink-soft">いずれもオークションの落札価格（実売）で、買取査定額は一般にこれより低くなります。内訳と出典は下の表をご覧ください。</p>
+          </div>
           <div className="note-box mt-8 max-w-3xl">
             <p className="font-bold text-ink mb-1">実売価格は買取査定額とは異なります</p>
             <p>

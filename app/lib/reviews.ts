@@ -66,7 +66,7 @@ export const REVIEWS: Review[] = [
   },
   {
     slug: "komehyo",
-    name: "コメ兵（KOMEHYO)",
+    name: "コメ兵（KOMEHYO）",
     company: "株式会社コメ兵",
     license: "愛知県公安委員会許可 第541162007700号",
     methods: ["宅配", "出張", "店頭"],

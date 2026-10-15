@@ -17,7 +17,7 @@ export async function generateMetadata({
   const r = REVIEWS.find((x) => x.slug === slug);
   if (!r) return {};
   return {
-    title: `${r.name}の口コミ・評判は？買取方法・手数料・古物商許可を公式情報で検証【${r.confirmedAt.replace(/(\d+年\d+月).*/, "$1")}確認】`,
+    title: `${r.name}の買取は？口コミ・評判と買取方法・手数料・古物商許可を公式情報で検証【${r.confirmedAt.replace(/(\d+年\d+月).*/, "$1")}確認】`,
     description: `${r.name}（${r.company}）の口コミ・評判を調べる前に押さえたい買取方法・手数料・古物商許可・店舗網を公式サイトで一次確認して整理。買取不可品や返送料など確認できなかった項目も正直に記載し、口コミの読み方まで案内します。架空の口コミは掲載しません。`,
     alternates: { canonical: `${SITE_URL}/reviews/${r.slug}/` },
   };
