@@ -38,12 +38,10 @@ const partners: { name: string; slug: string | null }[] = [
   { name: "Librand", slug: "librand" },
   { name: "RECLO", slug: "reclo" },
   { name: "ウリエル", slug: "uriel" },
-  { name: "ゴールドウィン", slug: null },
   { name: "Tifana", slug: "tifana" },
   { name: "あきなや", slug: "akinaya" },
   { name: "ブランドゥール", slug: "brandoule" },
   { name: "ネットオフ", slug: "netoff" },
-  { name: "eあきんど", slug: null },
   { name: "カインドオル", slug: "kindal" },
   { name: "まねきや", slug: "manekiya" },
   { name: "なんぼや", slug: "nanboya" },
@@ -97,7 +95,7 @@ export default function RankingPage() {
         <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
           <h2 className="rule-gold text-2xl text-ink mb-4">掲載業者</h2>
           <p className="max-w-3xl text-[0.92rem] leading-relaxed text-ink-soft mb-8">
-            公式サイトでの確認・検証が完了した業者からレビューを公開しています。リンクのある業者はレビュー公開済みです（残りは現在確認中）。
+            掲載している業者は、すべて公式サイトでの確認を終えてレビューを公開しています。業者名からレビューへ進めます。
           </p>
           <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-4 max-w-4xl">
             {partners.map((p) => (
