@@ -46,7 +46,7 @@ export default function Footer() {
               BRAND KAITORI NAVI
             </p>
             <p className="mt-4 text-[0.82rem] leading-relaxed text-ivory/55">
-              ブランド買取の比較情報メディアです。相場は実際の売買データ（出典・取得日つき）、業者情報は各社公式サイトの確認値のみを掲載し、架空の口コミ・体験談は作成しません。
+              ブランド買取の比較情報メディアです。相場は実際の売買データ（出典と取得日を併記）、業者情報は各社公式サイトの確認値のみを掲載し、架空の口コミ・体験談は作成しません。
             </p>
             <p className="mt-4 text-[0.74rem] text-ivory/40">
               運営: {OPERATOR}（情報メディアであり、買取サービスの提供事業者ではありません）

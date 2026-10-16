@@ -76,7 +76,7 @@ export default function NoBoxGuidePage() {
         <h2 className="rule-gold text-2xl text-ink mb-4">1. 「箱なし・付属品なし」に関する公式記載（18社）</h2>
         <DealerPolicyTable
           field="accessories"
-          caption="各社の公式サイト（よくある質問・買取案内・規約）から、箱・保存袋・ギャランティ・保証書などの付属品が無い場合の扱いに関する記載を集めました。"
+          caption="各社の公式サイト（よくある質問・買取案内・規約）から、箱・保存袋・ギャランティ・保証書などの付属品がない場合の扱いに関する記載を集めました。"
         />
         <div className="note-box mt-8 max-w-3xl">
           <p className="font-bold text-ink mb-1">読み方</p>
@@ -91,7 +91,7 @@ export default function NoBoxGuidePage() {
         <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
           <h2 className="rule-gold text-2xl text-ink mb-4">2. 付属品ごとの役割と、無いときの考え方</h2>
           <p className="max-w-3xl text-[0.9rem] leading-relaxed text-ink-soft mb-10">
-            ひとくちに「付属品」といっても、査定での役割は種類ごとに違います。何が無いのかを整理してから業者に伝えると、提示額の理由を理解しやすくなります。
+            ひとくちに「付属品」といっても、査定での役割は種類ごとに違います。何がないのかを整理してから業者に伝えると、提示額の理由を理解しやすくなります。
           </p>
           <div className="grid gap-6 md:grid-cols-2 max-w-5xl">
             {accessories.map((a, i) => (
@@ -109,7 +109,7 @@ export default function NoBoxGuidePage() {
 
       {/* 3. 手順 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-        <h2 className="rule-gold text-2xl text-ink mb-8">3. 付属品が無いときに売る前にやること</h2>
+        <h2 className="rule-gold text-2xl text-ink mb-8">3. 付属品がないときに売る前にやること</h2>
         <ul className="max-w-3xl space-y-3">
           {steps.map((c) => (
             <li key={c} className="flex items-baseline gap-3 text-[0.92rem] leading-relaxed text-ink-soft">

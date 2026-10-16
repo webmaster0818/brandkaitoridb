@@ -140,7 +140,7 @@ export default function LouisVuittonSoubaPage() {
             業者の広告に載る「参考買取価格」ではなく、オークションで実際に売買が成立した価格だけを集計しました。ルイヴィトンは中古市場で最も流通量が多いブランドのひとつで、バッグ・財布だけで直近30日に7,000件を超える売買が確認できます。査定に出す前の「相場の物差し」としてお使いください。
           </p>
           <div className="card-lux mt-8 max-w-3xl p-6">
-            <p className="font-bold text-ink mb-3">ルイヴィトンの相場はいくら？（先に結論）</p>
+            <p className="font-bold text-ink mb-3">ルイヴィトンの買取相場の目安</p>
             <ul className="space-y-1.5 text-[0.9rem] leading-relaxed text-ink-soft">
               <li>バッグ全体の平均落札価格は<strong className="text-ink">47,451円</strong>、財布全体は<strong className="text-ink">58,978円</strong>（直近30日・2026年8月17日取得）</li>
               <li>人気モデルはネヴァーフル<strong className="text-ink">85,416円</strong>、スピーディ<strong className="text-ink">81,539円</strong>が平均（2026年9月21日取得）</li>

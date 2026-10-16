@@ -9,7 +9,7 @@ import ItemSoubaTable from "../../components/ItemSoubaTable";
 export const metadata: Metadata = {
   title: "ブランド財布の買取相場の目安と高く売る実務｜13ブランドの実売データ",
   description:
-    "ルイヴィトン・シャネル・エルメス・グッチ・プラダなど13ブランドの財布の実売相場（落札件数・平均・最高値・出典つき）と、財布の査定で見られる点、財布を公式に取り扱う買取業者の一覧をまとめました。",
+    "ルイヴィトン・シャネル・エルメス・グッチ・プラダなど13ブランドの財布の実売相場（落札件数・平均・最高値・出典を併記）と、財布の査定で見られる点、財布を公式に取り扱う買取業者の一覧をまとめました。",
   alternates: { canonical: `${SITE_URL}/guide/wallet/` },
 };
 
