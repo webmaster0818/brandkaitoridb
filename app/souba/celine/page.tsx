@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "セリーヌの実売相場データ｜買取相場の目安【2026年8月取得】",
   description:
-    "セリーヌのバッグ・財布について、オークションで実際に売買が成立した価格を集計。直近30日の件数・平均落札価格・最高値を出典つきで公開します。査定前の物差しにどうぞ。",
+    "セリーヌのバッグ・財布について、オークションで実際に売買が成立した価格を集計。直近30日の件数・平均落札価格・最高値を出典とともに公開します。査定前の物差しにどうぞ。",
   alternates: { canonical: `${SITE_URL}/souba/celine/` },
 };
 
@@ -143,10 +143,10 @@ export default function CelineSoubaPage() {
 
       {/* 売る前の準備 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-        <h2 className="rule-gold text-2xl text-ink mb-8">売る前にやっておきたい準備</h2>
+        <h2 className="rule-gold text-2xl text-ink mb-8">売却前に準備しておきたい事項</h2>
         <div className="max-w-3xl space-y-4 text-[0.92rem] leading-loose text-ink-soft">
           <p>
-            箱・保存袋・レシートなどの付属品は、揃っているだけで査定の条件が変わります。購入時の付属品を先に探しておきましょう。バッグや財布の内側にある型番・製造刻印を控えておくと、実売データとの照合もしやすくなります。
+            箱・保存袋・レシートなどの付属品は、揃っているだけで査定の条件が変わります。購入時の付属品は事前にご用意ください。バッグや財布の内側にある型番・製造刻印を控えておくと、実売データとの照合もしやすくなります。
           </p>
           <p>
             そのうえで、1社で即決せず複数の業者に相見積もりを取り、提示額を上の実売レンジと見比べるのが基本です。

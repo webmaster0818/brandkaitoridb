@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "サンローランの実売相場データ｜買取相場の目安【2026年9月】",
   description:
-    "サンローランのバッグ・財布・ライダース・ケイトについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典つきで公開します。",
+    "サンローランのバッグ・財布・ライダース・ケイトについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典とともに公開します。",
   alternates: { canonical: `${SITE_URL}/souba/saint-laurent/` },
 };
 
@@ -173,10 +173,10 @@ export default function SaintLaurentSoubaPage() {
 
       {/* 売る前の準備 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-        <h2 className="rule-gold text-2xl text-ink mb-8">売る前にやっておきたい準備</h2>
+        <h2 className="rule-gold text-2xl text-ink mb-8">売却前に準備しておきたい事項</h2>
         <div className="max-w-3xl space-y-4 text-[0.92rem] leading-loose text-ink-soft">
           <p>
-            サンローランは製造時期の判別が査定に影響します。バッグ・財布は内側の刻印（シリアル）と保存袋・ギャランティカード、ライダースは内タグのサイズ・年式表記を先に確認しておきましょう。ケイトはサイズ（ミディアム／スモール）とタッセルの有無を控えておくと照合がしやすくなります。
+            サンローランは製造時期の判別が査定に影響します。バッグ・財布は内側の刻印（シリアル）と保存袋・ギャランティカード、ライダースは内タグのサイズ・年式表記を事前にご確認ください。ケイトはサイズ（ミディアム／スモール）とタッセルの有無を控えておくと照合がしやすくなります。
           </p>
           <p>
             そのうえで、1社で即決せず複数の業者に相見積もりを取り、提示額を上の実売レンジと見比べるのが基本です。

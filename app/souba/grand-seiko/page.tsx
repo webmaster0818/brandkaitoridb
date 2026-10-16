@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "グランドセイコーの実売相場データ｜買取相場の目安【2026年9月】",
   description:
-    "グランドセイコーのスプリングドライブ・クオーツ・メカニカル・ヘリテージについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典つきで公開します。",
+    "グランドセイコーのスプリングドライブ・クオーツ・メカニカル・ヘリテージについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典とともに公開します。",
   alternates: { canonical: `${SITE_URL}/souba/grand-seiko/` },
 };
 
@@ -173,7 +173,7 @@ export default function GrandSeikoSoubaPage() {
 
       {/* 売る前の準備 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-        <h2 className="rule-gold text-2xl text-ink mb-8">売る前にやっておきたい準備</h2>
+        <h2 className="rule-gold text-2xl text-ink mb-8">売却前に準備しておきたい事項</h2>
         <div className="max-w-3xl space-y-4 text-[0.92rem] leading-loose text-ink-soft">
           <p>
             グランドセイコーは箱・保証書・余りコマ・購入店の記録がそろっているかで査定額が変わります。型番（SBGA／SBGX／SLGH／SBGCなど）を保証書か裏蓋で控えておくと、実売データとの照合がしやすくなります。

@@ -4,7 +4,7 @@ import { DEALER_POLICIES, type DealerPolicy, type PolicyQuote } from "../lib/dea
 type Field = "accessories" | "damaged" | "notAccepted";
 
 /**
- * 業者18社の公式記載を並べる照合表。引用は公式ページ原文のみ(要約なし)、記載が見つからない社は「記載なし」と正直に表示。
+ * 業者18社の公式記載を並べる照合表。引用は公式ページ原文のみ(要約なし)、記載が見つからない社は「記載なし」と表示。
  * 業者サイトへの外部リンクは設置しない(レビューページへ内部リンク)。
  */
 export default function DealerPolicyTable({ field, caption }: { field: Field; caption: string }) {

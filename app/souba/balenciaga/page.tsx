@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "バレンシアガの実売相場データ｜買取相場の目安【2026年9月】",
   description:
-    "バレンシアガのバッグ・財布・トリプルS・シティについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典つきで公開します。",
+    "バレンシアガのバッグ・財布・トリプルS・シティについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典とともに公開します。",
   alternates: { canonical: `${SITE_URL}/souba/balenciaga/` },
 };
 
@@ -173,7 +173,7 @@ export default function BalenciagaSoubaPage() {
 
       {/* 売る前の準備 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-        <h2 className="rule-gold text-2xl text-ink mb-8">売る前にやっておきたい準備</h2>
+        <h2 className="rule-gold text-2xl text-ink mb-8">売却前に準備しておきたい事項</h2>
         <div className="max-w-3xl space-y-4 text-[0.92rem] leading-loose text-ink-soft">
           <p>
             バレンシアガはバッグの刻印（型番・製造番号）とスニーカーのサイズ・箱の有無が査定に直結します。保存袋・箱・替え紐・レシートを先に探し、コラボ品は型番を控えておくと、実売データとの照合がしやすくなります。

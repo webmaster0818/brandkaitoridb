@@ -18,7 +18,7 @@ export async function generateMetadata({
   if (!r) return {};
   return {
     title: `${r.name}の買取は？口コミ・評判と買取方法・手数料・古物商許可を公式情報で検証【${r.confirmedAt.replace(/(\d+年\d+月).*/, "$1")}確認】`,
-    description: `${r.name}（${r.company}）の口コミ・評判を調べる前に押さえたい買取方法・手数料・古物商許可・店舗網を公式サイトで一次確認して整理。買取不可品や返送料など確認できなかった項目も正直に記載し、口コミの読み方まで案内します。架空の口コミは掲載しません。`,
+    description: `${r.name}（${r.company}）の口コミ・評判を調べる前に押さえたい買取方法・手数料・古物商許可・店舗網を公式サイトで一次確認して整理。買取不可品や返送料など確認できなかった項目はその旨を記載し、口コミの読み方まで案内します。架空の口コミは掲載しません。`,
     alternates: { canonical: `${SITE_URL}/reviews/${r.slug}/` },
   };
 }
@@ -87,7 +87,7 @@ export default async function ReviewDetailPage({
             {r.name}の口コミ・評判は？ブランド買取を公式情報で検証
           </h1>
           <p className="mt-5 max-w-2xl text-[0.95rem] leading-loose text-ink-soft">
-            このページの情報は、{r.name}の公式サイトを当サイトが直接確認して整理したものです（確認日: {r.confirmedAt}）。伝聞や口コミサイトからの引用はしていません。確認できなかった項目は「確認できなかったこと」として正直に記載します。
+            このページの情報は、{r.name}の公式サイトを当サイトが直接確認して整理したものです（確認日: {r.confirmedAt}）。伝聞や口コミサイトからの引用はしていません。確認できなかった項目は「確認できなかったこと」として記載します。
           </p>
         </div>
       </section>

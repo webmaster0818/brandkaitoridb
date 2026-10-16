@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME, SITE_TAGLINE } from "./lib/site";
 export const metadata: Metadata = {
   title: `${SITE_NAME}｜${SITE_TAGLINE}`,
   description:
-    "ブランド品（バッグ・財布・時計・ジュエリー）の買取業者を、実際の売買データと公式確認情報で正直に比較。相場の実売レンジ、買取方法の違い、売る前の準備までこの1サイトで。",
+    "ブランド品（バッグ・財布・時計・ジュエリー）の買取業者を、実際の売買データと公式サイトの記載にもとづいて比較。相場の実売レンジ、買取方法の違い、売る前の準備までこの1サイトで。",
   alternates: { canonical: `${SITE_URL}/` },
 };
 
@@ -19,7 +19,7 @@ const pillars = [
   {
     eyebrow: "REVIEW",
     title: "公式確認の業者レビュー",
-    body: "手数料・買取方法・古物商許可番号まで各社公式サイトで確認し、確認日つきで掲載。架空の口コミは一切作成しません。",
+    body: "手数料・買取方法・古物商許可番号まで各社公式サイトで確認し、確認日を明記して掲載しています。架空の口コミは一切作成しません。",
     href: "/reviews/",
     cta: "業者レビューを見る",
   },
@@ -46,12 +46,12 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-5 pt-16 pb-14 md:pt-24 md:pb-20">
           <p className="eyebrow mb-5">HONEST COMPARISON</p>
           <h1 className="text-3xl md:text-[2.9rem] leading-[1.35] text-ink max-w-3xl">
-            ブランド品を、
+            <span className="text-gold">実売データ</span>にもとづく、
             <br className="md:hidden" />
-            <span className="text-gold">実売データ</span>で正しく売る。
+            ブランド品の買取ガイド
           </h1>
           <p className="mt-6 max-w-2xl text-[0.95rem] leading-loose text-ink-soft">
-            {SITE_NAME}は、バッグ・財布・時計・ジュエリーの買取業者を「実際に売れた価格」と「公式サイトで確認した事実」だけで比較する情報メディアです。誇張した買取実績や架空の口コミに頼らず、売る前に知るべきことを正直にお伝えします。
+            {SITE_NAME}は、バッグ・財布・時計・ジュエリーの買取業者を「実際に売れた価格」と「公式サイトで確認した事実」だけで比較する情報メディアです。誇張した買取実績や架空の口コミは掲載せず、売却前に確認すべき事項をご案内します。
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <a href="/ranking/" className="btn-gold">業者を比較する</a>

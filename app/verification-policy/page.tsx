@@ -3,7 +3,7 @@ import { SITE_URL, SITE_NAME, OPERATOR } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "検証ポリシー｜相場データの計測方法と業者情報の確認手順",
-  description: `${SITE_NAME}が相場データをどう計測し、業者情報・口コミ・広告をどう扱っているかを公開します。相場は実際の売買成立価格のみ、業者情報は公式サイト確認＋確認日つき、架空の口コミは作成しません。`,
+  description: `${SITE_NAME}が相場データをどう計測し、業者情報・口コミ・広告をどう扱っているかを公開します。相場は実際の売買成立価格のみ、業者情報は公式サイトでの確認と確認日の明記、架空の口コミは作成しません。`,
   alternates: { canonical: `${SITE_URL}/verification-policy/` },
 };
 
@@ -126,8 +126,8 @@ export default function VerificationPolicyPage() {
             <li className="flex gap-3">
               <span className="text-gold font-bold shrink-0">◆</span>
               <span>
-                <strong className="text-ink">無いものは「少ない」と書く：</strong>
-                確認できる口コミが少ない業者については、無理に評判をまとめず「第三者の口コミがまだ少ない」と正直に記載します。
+                <strong className="text-ink">確認できない情報は「少ない」と記載します：</strong>
+                確認できる口コミが少ない業者については、無理に評判をまとめず「第三者の口コミがまだ少ない」と記載します。
               </span>
             </li>
           </ul>

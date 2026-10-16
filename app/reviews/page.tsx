@@ -6,7 +6,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "業者レビュー一覧",
   description:
-    "ブランド買取業者のレビューを、公式サイトで確認した事実と確認日つきで公開するハブページ。買取方法・手数料・古物商許可を一次確認した業者から順に掲載しています。",
+    "ブランド買取業者のレビューを、公式サイトで確認した事実を確認日とともに公開するハブページ。買取方法・手数料・古物商許可を一次確認した業者から順に掲載しています。",
   alternates: { canonical: `${SITE_URL}/reviews/` },
 };
 

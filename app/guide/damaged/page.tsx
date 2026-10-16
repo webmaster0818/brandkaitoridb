@@ -90,7 +90,7 @@ export default function DamagedGuidePage() {
 
       <section className="bg-ivory-deep border-y border-line">
         <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-          <h2 className="rule-gold text-2xl text-ink mb-4">2. ダメージの種類別に見る、公式記載の傾向</h2>
+          <h2 className="rule-gold text-2xl text-ink mb-4">2. ダメージの種類別に見た公式記載の傾向</h2>
           <p className="max-w-3xl text-[0.9rem] leading-relaxed text-ink-soft mb-10">
             同じ「状態が悪い」でも、査定での扱いは箇所と品目で違います。照合表の記載を、ダメージの種類ごとに読み分けたものです。
           </p>

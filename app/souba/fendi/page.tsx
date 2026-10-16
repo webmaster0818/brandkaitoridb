@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "フェンディの実売相場データ｜買取相場の目安【2026年9月】",
   description:
-    "フェンディのバゲット・ピーカブー・財布・バッグについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典つきで公開します。",
+    "フェンディのバゲット・ピーカブー・財布・バッグについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典とともに公開します。",
   alternates: { canonical: `${SITE_URL}/souba/fendi/` },
 };
 
@@ -173,10 +173,10 @@ export default function FendiSoubaPage() {
 
       {/* 売る前の準備 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-        <h2 className="rule-gold text-2xl text-ink mb-8">売る前にやっておきたい準備</h2>
+        <h2 className="rule-gold text-2xl text-ink mb-8">売却前に準備しておきたい事項</h2>
         <div className="max-w-3xl space-y-4 text-[0.92rem] leading-loose text-ink-soft">
           <p>
-            フェンディはヴィンテージ品の比率が高いため、製造時期がわかる刻印・ホログラムシール・付属のギャランティカードを先に確認しておきましょう。バゲットはサイズ（ミニ／ミディアム）、ピーカブーはサイズと型番（8BN〜）を控えておくと、実売データとの照合がしやすくなります。
+            フェンディはヴィンテージ品の比率が高いため、製造時期がわかる刻印・ホログラムシール・付属のギャランティカードを事前にご確認ください。バゲットはサイズ（ミニ／ミディアム）、ピーカブーはサイズと型番（8BN〜）を控えておくと、実売データとの照合がしやすくなります。
           </p>
           <p>
             そのうえで、1社で即決せず複数の業者に相見積もりを取り、提示額を上の実売レンジと見比べるのが基本です。

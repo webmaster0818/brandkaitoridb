@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "ルイヴィトンの買取相場はいくら？バッグ・財布の実売データで見る目安【2026年9月更新】",
   description:
-    "ルイヴィトンのバッグ・財布・モノグラムラインについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典つきで公開します。査定前の物差しにどうぞ。",
+    "ルイヴィトンのバッグ・財布・モノグラムラインについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典とともに公開します。査定前の物差しにどうぞ。",
   alternates: { canonical: `${SITE_URL}/souba/louis-vuitton/` },
 };
 
@@ -289,7 +289,7 @@ export default function LouisVuittonSoubaPage() {
 
       {/* 売る前の準備 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-        <h2 className="rule-gold text-2xl text-ink mb-8">売る前にやっておきたい準備</h2>
+        <h2 className="rule-gold text-2xl text-ink mb-8">売却前に準備しておきたい事項</h2>
         <div className="max-w-3xl space-y-4 text-[0.92rem] leading-loose text-ink-soft">
           <p>
             箱・保存袋・ショルダーストラップ・パドロック（鍵）・購入時のレシートなどの付属品は、揃っているだけで査定の条件が変わります。製品内側の製造刻印（型番・シリアル）を控えておくと、実売データとの照合もしやすくなります。

@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "シャネルの実売相場データ｜買取相場の目安【2026年9月更新】",
   description:
-    "シャネルのマトラッセ・バッグ・財布について、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典つきで公開します。査定前の物差しにどうぞ。",
+    "シャネルのマトラッセ・バッグ・財布について、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典とともに公開します。査定前の物差しにどうぞ。",
   alternates: { canonical: `${SITE_URL}/souba/chanel/` },
 };
 
@@ -258,10 +258,10 @@ export default function ChanelSoubaPage() {
 
       {/* 売る前の準備 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-        <h2 className="rule-gold text-2xl text-ink mb-8">売る前にやっておきたい準備</h2>
+        <h2 className="rule-gold text-2xl text-ink mb-8">売却前に準備しておきたい事項</h2>
         <div className="max-w-3xl space-y-4 text-[0.92rem] leading-loose text-ink-soft">
           <p>
-            シャネルはギャランティカードとシリアルシールの有無が査定の条件を大きく左右します。箱・保存袋・カメリア（付属の花飾り）・購入時のレシートと合わせて先に探しておきましょう。シリアル番号を控えておくと、実売データとの照合もしやすくなります。
+            シャネルはギャランティカードとシリアルシールの有無が査定の条件を大きく左右します。箱・保存袋・カメリア（付属の花飾り）・購入時のレシートとあわせて事前にご用意ください。シリアル番号を控えておくと、実売データとの照合もしやすくなります。
           </p>
           <p>
             そのうえで、1社で即決せず複数の業者に相見積もりを取り、提示額を上の実売レンジと見比べるのが基本です。

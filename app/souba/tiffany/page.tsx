@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 export const metadata: Metadata = {
   title: "ティファニーの実売相場データ｜買取相場の目安【2026年8月取得】",
   description:
-    "ティファニーのネックレス・リング・ブレスレットについて、オークションで実際に売買が成立した価格を集計。直近30日の件数・平均落札価格・最高値を出典つきで公開します。",
+    "ティファニーのネックレス・リング・ブレスレットについて、オークションで実際に売買が成立した価格を集計。直近30日の件数・平均落札価格・最高値を出典とともに公開します。",
   alternates: { canonical: `${SITE_URL}/souba/tiffany/` },
 };
 
@@ -150,7 +150,7 @@ export default function TiffanySoubaPage() {
 
       {/* 売る前の準備 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-        <h2 className="rule-gold text-2xl text-ink mb-8">売る前にやっておきたい準備</h2>
+        <h2 className="rule-gold text-2xl text-ink mb-8">売却前に準備しておきたい事項</h2>
         <div className="max-w-3xl space-y-4 text-[0.92rem] leading-loose text-ink-soft">
           <p>
             箱・保存袋（ブルーボックス・ポーチ）・レシートなどの付属品は、揃っているだけで査定の条件が変わります。ジュエリーは裏側や内側の刻印（T&Co.、素材表記など）を控えておくと、実売データとの照合もしやすくなります。

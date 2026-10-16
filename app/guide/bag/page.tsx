@@ -115,7 +115,7 @@ export default function BagGuidePage() {
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
         <h2 className="rule-gold text-2xl text-ink mb-4">1. 売りたいブランドの実売相場を確認する</h2>
         <p className="max-w-3xl text-[0.9rem] leading-relaxed text-ink-soft mb-8">
-          当サイトでは、業者の「参考買取価格」ではなく、オークションで実際に売買が成立した価格を件数・平均・最高値・出典・取得日つきで公開しています。バッグ主体のブランドは以下の13ブランドを公開中です。各ページの「最高落札価格の内訳」で、どの素材・サイズが高値だったかまで確認できます。
+          当サイトでは、業者の「参考買取価格」ではなく、オークションで実際に売買が成立した価格を件数・平均・最高値・出典・取得日を併記して公開しています。バッグ主体のブランドは以下の13ブランドを公開中です。各ページの「最高落札価格の内訳」で、どの素材・サイズが高値だったかまで確認できます。
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl">
           {bagBrands.map((b) => (
@@ -180,7 +180,7 @@ export default function BagGuidePage() {
             4. バッグを公式に取り扱う業者で相見積もりを取る（{bagDealers.length}社）
           </h2>
           <p className="max-w-3xl text-[0.9rem] leading-relaxed text-ink-soft mb-8">
-            以下は、当サイトの業者レビューのうち、公式サイトの取扱ジャンルに「バッグ」または「ブランド品」を明記している業者です。各レビューでは買取方法・手数料・古物商許可番号を公式サイトで一次確認し、確認できなかった項目も正直に記載しています。2〜3社に絞って査定を依頼し、提示額と手数料を並べて比較してください。
+            以下は、当サイトの業者レビューのうち、公式サイトの取扱ジャンルに「バッグ」または「ブランド品」を明記している業者です。各レビューでは買取方法・手数料・古物商許可番号を公式サイトで一次確認し、確認できなかった項目はその旨を記載しています。2〜3社に絞って査定を依頼し、提示額と手数料を並べて比較してください。
           </p>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl">
             {bagDealers.map((r) => (
