@@ -53,7 +53,7 @@ export const DEALER_POLICIES: DealerPolicy[] = [
     wallet: "yes",
     shoes: "yes",
     itemsQuote: "また、多くお問い合わせをいただくものとして、ブランド服や靴などのアパレル関連の買取もご用命をいただいております。",
-    confirmedAt: "2026-09-22",
+    confirmedAt: "2026-10-26",
   },
   {
     slug: "kaitori-daikichi",
