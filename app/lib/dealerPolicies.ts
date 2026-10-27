@@ -63,7 +63,7 @@ export const DEALER_POLICIES: DealerPolicy[] = [
     wallet: "yes",
     shoes: "yes",
     itemsQuote: "バーバリー、エルメス、ルイ・ヴィトン、フェラガモのスカーフや靴、ベルトからビキューナのジャケット、ロロピアーナのコートやモンクレールのダウン、ルブタンの靴やヴィトンのジャケットなど。",
-    confirmedAt: "2026-09-22",
+    confirmedAt: "2026-10-27",
   },
   {
     slug: "ikuraya",
