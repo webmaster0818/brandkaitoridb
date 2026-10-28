@@ -3,9 +3,9 @@ import { SITE_URL } from "../../lib/site";
 import Breadcrumbs from "../../components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "ロレックスの実売相場データ｜買取相場の目安【2026年9月更新】",
+  title: "ロレックスの実売相場データ｜型番・年式（世代）別の買取相場の目安【2026年9月取得】",
   description:
-    "ロレックスのデイトナ・サブマリーナ・デイトジャスト・エクスプローラーについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典とともに公開します。",
+    "ロレックスのデイトナ・サブマリーナ・デイトジャスト・エクスプローラーについて、オークションで実際に売買が成立した価格を集計。落札件数・平均落札価格・最高値を出典とともに公開し、サブマリーナ デイトは3世代（16610・116610・126610）の単品最高値を比べます。",
   alternates: { canonical: `${SITE_URL}/souba/rolex/` },
 };
 
@@ -239,6 +239,30 @@ export default function RolexSoubaPage() {
             ))}
             <li>※型番・サイズのキーワード集計には、関連する小物・パーツ・状態不良品も含まれます。平均値は「状態の良い本体の相場」ではなく、最高値は素材・状態の特殊例を含みます。買取査定額は実売より低くなるのが一般的です。</li>
           </ul>
+          <div className="mt-10 border border-line bg-white/60 p-6" id="nenshiki">
+            <h3 className="text-lg text-ink mb-3">年式（世代）で相場はどう変わるか — サブマリーナ デイトの3世代比較</h3>
+            <p className="text-[0.9rem] leading-relaxed text-ink-soft mb-4">
+              ロレックスの「年式」は、同じモデルでもリファレンス（型番）の世代と、出品タイトルに書かれるシリアルの記号（「M番」「E番」「ランダム番」など）で表されます。上の表のうち、サブマリーナ デイトは3世代の落札がそろっているため、単品の最高落札価格を並べました（取得日2026年9月21日・Yahoo!オークションの落札一覧で確認）。
+            </p>
+            <div className="overflow-x-auto">
+              <table className="table-lux min-w-[560px]">
+                <thead>
+                  <tr><th>世代（型番）</th><th>出品タイトルの年式表記</th><th>単品の最高落札価格</th><th>落札日</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>16610（ノーマル）</td><td>E番</td><td>1,734,600円</td><td>未記録</td></tr>
+                  <tr><td>16610LV（グリーンベゼル）</td><td>M番</td><td>2,201,100円</td><td>2026年7月5日</td></tr>
+                  <tr><td>116610LN</td><td>記載なし（箱・保証書付き・美品）</td><td>1,978,000円</td><td>2026年7月27日</td></tr>
+                  <tr><td>126610LN</td><td>ランダム番</td><td>2,238,000円</td><td>2026年9月17日</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul className="mt-4 space-y-1 text-[0.85rem] leading-relaxed text-ink-soft">
+              <li>・新しい世代ほど高いとは限りません。旧世代の16610でも、ベゼル色の違う16610LVは116610LNを上回っています。</li>
+              <li>・同じ世代の中では、箱・保証書の有無と状態（「美品」などの記載）で価格が分かれます。年式だけで相場は決まりません。</li>
+              <li>・各世代とも単品の落札は1件ずつの比較です。件数が少ないため、目安として読んでください。</li>
+            </ul>
+          </div>
         </div>
       </section>
 
