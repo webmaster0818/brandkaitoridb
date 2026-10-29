@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { SITE_URL } from "../lib/site";
 import Breadcrumbs from "../components/Breadcrumbs";
+import { REVIEWS } from "../lib/reviews";
 
 export const metadata: Metadata = {
-  title: "ブランド買取業者の比較",
+  title: "ブランド買取業者18社の比較表｜買取方法・取扱ジャンル・相見積もりの進め方",
   description:
-    "ブランド買取業者を「買取方法×得意ジャンル×手数料」の3軸で比較するためのハブページ。1社即決を避け、相見積もりで納得して売るための考え方と、今後掲載予定の業者一覧を紹介します。",
+    "ブランド買取業者18社を、公式サイトで確認できた買取方法（宅配・出張・店頭）と主な取扱ジャンルの一覧表で比較。1社即決を避けて相見積もりで売り先を決めるための考え方と、各社の検証レビューへの入口をまとめています。",
   alternates: { canonical: `${SITE_URL}/ranking/` },
 };
 
@@ -62,8 +63,49 @@ export default function RankingPage() {
             ブランド買取業者の比較
           </h1>
           <p className="mt-5 max-w-2xl text-[0.95rem] leading-loose text-ink-soft">
-            当サイトでは、ブランド買取業者を「実際に確認できた事実」だけで比較します。各社の手数料や対応方法は現在、公式サイトでの確認作業を進めており、確認が済んだ業者から順にレビューを公開していきます。まずは、業者選びで失敗しないための「比較の考え方」から押さえてください。
+            当サイトでは、ブランド買取業者を「公式サイトで確認できた事実」だけで比較します。下の一覧表で買取方法と取扱ジャンルを見比べて候補を2〜3社に絞り、手数料などの詳細は各社の検証レビューで確認してください。
           </p>
+        </div>
+      </section>
+
+      {/* 一覧比較表 */}
+      <section id="hikaku" className="border-b border-line">
+        <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
+          <h2 className="rule-gold text-2xl text-ink mb-4">ブランド買取業者{REVIEWS.length}社の一覧比較表</h2>
+          <p className="max-w-3xl text-[0.92rem] leading-relaxed text-ink-soft mb-6">
+            各社の公式サイトに明記されている買取方法と主な取扱ジャンルを並べました。「○」は公式に記載がある方法、「—」は記載を確認できなかった方法です。査定料・送料・キャンセル時の扱いは条件が細かいため、各社のレビューで原文に近い形で確認してください。
+          </p>
+          <div className="overflow-x-auto">
+            <table className="min-w-[720px] w-full text-[0.86rem] text-ink-soft border-collapse">
+              <thead>
+                <tr className="border-b border-line text-left text-ink">
+                  <th className="py-3 pr-3 font-normal">業者</th>
+                  <th className="py-3 px-2 font-normal text-center">宅配</th>
+                  <th className="py-3 px-2 font-normal text-center">出張</th>
+                  <th className="py-3 px-2 font-normal text-center">店頭</th>
+                  <th className="py-3 px-3 font-normal">主な取扱ジャンル（公式記載）</th>
+                  <th className="py-3 pl-3 font-normal whitespace-nowrap">確認日</th>
+                </tr>
+              </thead>
+              <tbody>
+                {REVIEWS.map((r) => (
+                  <tr key={r.slug} className="border-b border-line/60 align-top">
+                    <td className="py-3 pr-3 whitespace-nowrap">
+                      <a href={`/reviews/${r.slug}/`} className="underline decoration-gold/50 underline-offset-4 hover:text-ink">
+                        {r.name}
+                      </a>
+                    </td>
+                    {["宅配", "出張", "店頭"].map((m) => (
+                      <td key={m} className="py-3 px-2 text-center">{r.methods.includes(m) ? "○" : "—"}</td>
+                    ))}
+                    <td className="py-3 px-3">{r.genres.slice(0, 4).join("・")}</td>
+                    <td className="py-3 pl-3 whitespace-nowrap">{r.confirmedAt}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-[0.8rem] text-ink-soft">表は横にスクロールできます。掲載順は当サイトによる評価・推奨を意味しません。</p>
         </div>
       </section>
 
@@ -87,6 +129,26 @@ export default function RankingPage() {
           <p>
             ブランド品の査定額は業者間で差が出ることが珍しくありません。候補を2〜3社に絞ったうえで相見積もりを取り、査定額と手数料を見比べてから売り先を決めることをおすすめします。
           </p>
+        </div>
+        <div id="aimitsumori" className="mt-10 max-w-3xl">
+          <h3 className="text-lg text-ink mb-4">相見積もりの進め方</h3>
+          <ol className="list-decimal pl-5 space-y-3 text-[0.9rem] leading-relaxed text-ink-soft">
+            <li>
+              先に<a href="/souba/" className="underline decoration-gold/50 underline-offset-4 hover:text-ink">実売相場</a>を確認し、提示額が高いか安いかを判断できる状態にします。
+            </li>
+            <li>
+              上の比較表で、使いたい買取方法（宅配・出張・店頭）に対応し、売りたい品目を扱う業者を2〜3社選びます。
+            </li>
+            <li>
+              各社に同じ品物を、箱・保存袋・保証書などの付属品をそろえた同じ状態で見てもらいます。条件がそろっていないと金額を比べられません。
+            </li>
+            <li>
+              査定額そのものではなく、送料・返送料・振込手数料などを差し引いた「手元に残る金額」で比べます。費用の条件は各社のレビューで確認できます。
+            </li>
+            <li>
+              出張買取（訪問購入）で売った場合は、特定商取引法のクーリング・オフの制度があります。対象外の品目もあるため、<a href="/guide/cooling-off/" className="underline decoration-gold/50 underline-offset-4 hover:text-ink">訪問購入のクーリングオフ</a>で確認してください。
+            </li>
+          </ol>
         </div>
       </section>
 
@@ -114,7 +176,7 @@ export default function RankingPage() {
 
           <h3 className="text-lg text-ink mt-12 mb-3">一括査定・価格比較サービス</h3>
           <p className="max-w-3xl text-[0.9rem] leading-relaxed text-ink-soft mb-5">
-            複数業者の査定額をまとめて比較できるサービスも、同様に掲載を予定しています。
+            複数業者の査定額をまとめて比較できるサービスもあります。当サイトでのレビューは準備中です。
           </p>
           <ul className="flex flex-wrap gap-x-8 gap-y-3">
             {aggregators.map((name) => (
