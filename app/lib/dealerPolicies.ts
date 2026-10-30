@@ -99,11 +99,11 @@ export const DEALER_POLICIES: DealerPolicy[] = [
     slug: "uriel",
     accessories: { status: "ok", q: "箱やギャランティーカードを紛失してしまいましたが、査定に影響ありますか？", quote: "付属品が揃っていた方が査定額はアップする可能性がありますが、無い場合でも買取可能です。ただし、お品物によっては買取できない場合もございますので、予めご了承ください。", source: "買取案内ページ" },
     damaged: { status: "ok", q: "汚れていたり、破損している古いバッグは買い取ってもらえませんか？", quote: "お品物の状態を直接拝見させていただけると、買取可能かどうか判断できます。ぜひ、無料査定をご利用ください。", source: "買取案内ページ" },
-    notAccepted: { status: "ok", q: null, quote: "第三者の著作権、商標権、意匠権、その他知的財産権を侵害する物", source: "買取規約・ルール" },
+    notAccepted: { status: "ok", q: null, quote: "第三者の著作権、商標権、意匠権、その他知的財産権を侵害する物", source: "サイト利用規約" },
     wallet: "yes",
     shoes: "yes",
     itemsQuote: "バッグや財布、時計やアクセサリー、お洋服や靴など、どのようなブランド品でも査定させていただきます。状態よって買取ができない物もございますので、まずは一度お問合せください。",
-    confirmedAt: "2026-09-22",
+    confirmedAt: "2026-10-30",
   },
   {
     slug: "tifana",
