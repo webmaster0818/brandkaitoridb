@@ -113,7 +113,7 @@ export const DEALER_POLICIES: DealerPolicy[] = [
     wallet: "yes",
     shoes: "yes",
     itemsQuote: "リサイクルショップ ティファナではお洋服(古着)、家電、靴、ブランド品、貴金属、骨董品など幅広くお取り扱い！",
-    confirmedAt: "2026-09-22",
+    confirmedAt: "2026-10-31",
   },
   {
     slug: "akinaya",
