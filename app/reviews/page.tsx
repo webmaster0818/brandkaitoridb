@@ -4,7 +4,7 @@ import { REVIEWS } from "../lib/reviews";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "業者レビュー一覧",
+  title: "買取業者18社の検証レビュー一覧｜公式情報で確認した項目",
   description:
     "ブランド買取業者のレビューを、公式サイトで確認した事実を確認日とともに公開するハブページ。買取方法・手数料・古物商許可を一次確認した業者から順に掲載しています。",
   alternates: { canonical: `${SITE_URL}/reviews/` },
@@ -35,9 +35,9 @@ export default function ReviewsPage() {
         <div className="mx-auto max-w-6xl px-5 pt-10 pb-12 md:pt-14 md:pb-16">
           <Breadcrumbs items={[{ label: "業者レビュー" }]} />
           <p className="eyebrow mt-8 mb-4">REVIEWS</p>
-          <h1 className="text-3xl md:text-4xl leading-snug text-ink">業者レビュー一覧</h1>
+          <h1 className="text-3xl md:text-4xl leading-snug text-ink">買取業者の検証レビュー一覧</h1>
           <p className="mt-5 max-w-2xl text-[0.95rem] leading-loose text-ink-soft">
-            当サイトの業者レビューは、各社公式サイトでの確認作業を経てから公開します。確認が終わっていない業者について、憶測でレビューを書くことはしません。このページでは、公開までの方針と「レビューをどう読むか」を先にお伝えします。
+            当サイトの業者レビューは、各社公式サイトでの確認作業を経てから公開します。確認が終わっていない業者について、憶測でレビューを書くことはしません。このページでは、公開までの方針と「レビューをどう読むか」を先にお伝えします。なお当サイトのレビューは、運営会社・古物商許可番号・買取方法・手数料などを公式サイトで1項目ずつ確認した記録です。出典を示せない利用者の口コミは掲載していません。
           </p>
         </div>
       </section>
