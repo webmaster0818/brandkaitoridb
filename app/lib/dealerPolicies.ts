@@ -153,7 +153,7 @@ export const DEALER_POLICIES: DealerPolicy[] = [
     wallet: "yes",
     shoes: "yes",
     itemsQuote: "洋服・バッグ・時計・靴・財布・アクセサリー・服飾小物などアパレル用品全般をお買取しております。",
-    confirmedAt: "2026-09-22",
+    confirmedAt: "2026-11-03",
   },
   {
     slug: "manekiya",
