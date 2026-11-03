@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SOUBA_SUMMARY } from "../lib/soubaSummary";
 import { SITE_URL } from "../lib/site";
 import Breadcrumbs from "../components/Breadcrumbs";
 
@@ -125,6 +126,42 @@ export default function SoubaPage() {
         </div>
       </section>
 
+
+      {/* 20ブランドの一覧表 */}
+      <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
+        <h2 className="rule-gold text-2xl text-ink mb-4">20ブランドの最高落札価格一覧</h2>
+        <p className="max-w-3xl text-[0.92rem] leading-relaxed text-ink-soft mb-6">
+          各ブランドページに掲載している実売データのうち、<strong>単品で最も高かった落札価格</strong>を1行ずつまとめました。
+          まとめ売り・他ブランド品の混在・フリマ出品を除いた単品出品だけを対象にしています。
+          件数・平均落札価格・出典リンクはブランドごとのページに掲載しています。
+          <strong>落札価格は買取査定額ではありません</strong>。査定額はここから業者の利益や販売コストを差し引いた金額になります。
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-[0.9rem]">
+            <thead>
+              <tr className="bg-ivory-deep">
+                <th className="border border-line px-3 py-2 text-left">ブランド</th>
+                <th className="border border-line px-3 py-2 text-left">最高だった品目</th>
+                <th className="border border-line px-3 py-2 text-left whitespace-nowrap">単品最高落札価格</th>
+                <th className="border border-line px-3 py-2 text-left whitespace-nowrap">取得日</th>
+              </tr>
+            </thead>
+            <tbody className="text-ink-soft">
+              {SOUBA_SUMMARY.map((b) => (
+                <tr key={b.slug}>
+                  <td className="border border-line px-3 py-2">
+                    <a href={`/souba/${b.slug}/`} className="underline decoration-gold/40 underline-offset-4 hover:text-gold transition-colors">{b.name}</a>
+                    <span className="block text-xs text-muted">{b.cats.join("・")}</span>
+                  </td>
+                  <td className="border border-line px-3 py-2">{b.topCat}</td>
+                  <td className="border border-line px-3 py-2 whitespace-nowrap">{b.topMax}</td>
+                  <td className="border border-line px-3 py-2 whitespace-nowrap">{b.fetchedAt}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
       {/* 検証ポリシー導線 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
         <div className="max-w-3xl">
