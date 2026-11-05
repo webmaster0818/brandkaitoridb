@@ -173,7 +173,7 @@ export const DEALER_POLICIES: DealerPolicy[] = [
     wallet: "yes",
     shoes: "yes",
     itemsQuote: "「なんぼや」では、使用、未使用問わず、靴もお洋服も査定対象でございますので、ご安心ください。",
-    confirmedAt: "2026-09-22",
+    confirmedAt: "2026-11-05",
   },
   {
     slug: "ribla",
