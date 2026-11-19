@@ -204,6 +204,15 @@ export default function RankingPage() {
             <a href="/souba/" className="btn-gold">実売相場データを見る</a>
             <a href="/guide/" className="btn-line">売り方ガイドを読む</a>
           </div>
+          <h3 className="text-lg text-ink mt-10 mb-3">状態が気になる品物を比べる前に</h3>
+          <p className="text-[0.92rem] leading-relaxed text-ink-soft mb-4">
+            傷や使用感がある品物、箱や付属品がない品物、そもそも買い取ってもらえるか分からない品物は、業者ごとに公式サイトの記載が異なります。掲載18社の公式記載を状態別に照合したページで確認してから相見積もりに進むと、断られる業者を最初から外せます。
+          </p>
+          <ul className="text-[0.92rem] leading-relaxed text-ink-soft list-disc pl-5 space-y-1">
+            <li><a href="/guide/damaged/" className="underline decoration-gold/50 underline-offset-4 hover:text-ink">ボロボロ・傷あり・使用感のあるブランド品は売れる？</a></li>
+            <li><a href="/guide/no-box/" className="underline decoration-gold/50 underline-offset-4 hover:text-ink">箱なし・付属品なしのブランド品は売れる？</a></li>
+            <li><a href="/guide/not-accepted/" className="underline decoration-gold/50 underline-offset-4 hover:text-ink">ブランド品の買取不可になるものは？</a></li>
+          </ul>
         </div>
       </section>
     </main>
