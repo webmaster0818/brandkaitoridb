@@ -189,6 +189,18 @@ export default function CoachSoubaPage() {
         </div>
       </section>
 
+      {/* 同時期に公開したブランド */}
+      <section className="mx-auto max-w-6xl px-5 pb-14 md:pb-18">
+        <h2 className="rule-gold text-2xl text-ink mb-6">同じ時期に集計したブランド</h2>
+        <p className="max-w-3xl text-[0.92rem] leading-relaxed text-ink-soft mb-8">
+          2026年11月24日に同じ方法で集計したブランドです。全ブランドの一覧は実売相場ハブにまとめています。
+        </p>
+        <div className="flex flex-wrap gap-4">
+          <a href="/souba/burberry/" className="btn-line">バーバリーの実売相場データ</a>
+          <a href="/souba/ferragamo/" className="btn-line">フェラガモの実売相場データ</a>
+        </div>
+      </section>
+
       {/* 計測方法 */}
       <section className="bg-ivory-deep border-t border-line">
         <div className="mx-auto max-w-6xl px-5 py-14 md:py-18">
