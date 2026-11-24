@@ -41,6 +41,12 @@ const brands2 = [
   { name: "グランドセイコー", slug: "grand-seiko" },
 ];
 
+const brands3 = [
+  { name: "バーバリー", slug: "burberry" },
+  { name: "コーチ", slug: "coach" },
+  { name: "フェラガモ", slug: "ferragamo" },
+];
+
 const brands = [
   { name: "エルメス", slug: "hermes" },
   { name: "ルイヴィトン", slug: "louis-vuitton" },
@@ -115,6 +121,20 @@ export default function SoubaPage() {
           </p>
           <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-5 max-w-4xl">
             {brands2.map((b) => (
+              <li key={b.slug} className="flex items-baseline gap-2.5 text-[0.92rem] text-ink-soft">
+                <span className="text-gold text-[0.7rem] shrink-0">◆</span>
+                <a href={`/souba/${b.slug}/`} className="underline decoration-gold/40 underline-offset-4 hover:text-gold transition-colors">
+                  {b.name}の実売相場データ
+                </a>
+              </li>
+            ))}
+          </ul>
+          <h2 className="rule-gold text-2xl text-ink mt-14 mb-4">第3弾の3ブランド（2026年11月取得）</h2>
+          <p className="max-w-3xl text-[0.92rem] leading-relaxed text-ink-soft mb-8">
+            コート・マフラー・バッグ・財布・靴の取引が多い3ブランドです。第1弾・第2弾と同じ方法で集計し、単品の最高値を特定できなかったカテゴリは「—」と表示しています。
+          </p>
+          <ul className="grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-5 max-w-4xl">
+            {brands3.map((b) => (
               <li key={b.slug} className="flex items-baseline gap-2.5 text-[0.92rem] text-ink-soft">
                 <span className="text-gold text-[0.7rem] shrink-0">◆</span>
                 <a href={`/souba/${b.slug}/`} className="underline decoration-gold/40 underline-offset-4 hover:text-gold transition-colors">
