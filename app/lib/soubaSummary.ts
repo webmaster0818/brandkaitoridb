@@ -268,5 +268,44 @@ export const SOUBA_SUMMARY: SoubaSummary[] = [
     "topCat": "ネックレス",
     "topMax": "810,637円",
     "fetchedAt": "2026年8月17日"
+  },
+  {
+    "slug": "burberry",
+    "name": "バーバリー",
+    "cats": [
+      "トレンチコート",
+      "マフラー",
+      "バッグ",
+      "財布"
+    ],
+    "topCat": "トレンチコート",
+    "topMax": "190,000円",
+    "fetchedAt": "2026年11月24日"
+  },
+  {
+    "slug": "coach",
+    "name": "コーチ",
+    "cats": [
+      "バッグ",
+      "ショルダーバッグ",
+      "トートバッグ",
+      "財布"
+    ],
+    "topCat": "バッグ",
+    "topMax": "289,000円",
+    "fetchedAt": "2026年11月24日"
+  },
+  {
+    "slug": "ferragamo",
+    "name": "フェラガモ",
+    "cats": [
+      "バッグ",
+      "財布",
+      "パンプス",
+      "ベルト"
+    ],
+    "topCat": "バッグ",
+    "topMax": "205,000円",
+    "fetchedAt": "2026年11月24日"
   }
 ];

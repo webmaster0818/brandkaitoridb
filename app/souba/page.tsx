@@ -4,9 +4,9 @@ import { SITE_URL } from "../lib/site";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "ブランド相場一覧｜20ブランドの買取相場の目安と落札実績",
+  title: "ブランド相場一覧｜23ブランドの買取相場の目安と落札実績",
   description:
-    "ブランド相場の一覧。ルイ・ヴィトン、エルメス、シャネル、ロレックスなど20ブランド（バッグ・時計・ジュエリー）の買取相場の目安を、実際に落札された価格をもとに掲載しています。データの集め方も公開しています。",
+    "ブランド相場の一覧。ルイ・ヴィトン、エルメス、シャネル、ロレックスなど23ブランド（バッグ・財布・時計・ジュエリー・衣類など）の買取相場の目安を、実際に落札された価格をもとに掲載しています。データの集め方も公開しています。",
   alternates: { canonical: `${SITE_URL}/souba/` },
 };
 
@@ -68,10 +68,10 @@ export default function SoubaPage() {
           <Breadcrumbs items={[{ label: "実売相場" }]} />
           <p className="eyebrow mt-8 mb-4">MARKET DATA</p>
           <h1 className="text-3xl md:text-4xl leading-snug text-ink">
-            ブランド相場一覧（20ブランドの実売データ）
+            ブランド相場一覧（23ブランドの実売データ）
           </h1>
           <p className="mt-5 max-w-2xl text-[0.95rem] leading-loose text-ink-soft">
-            当サイトの相場データは、業者の広告に載る「参考買取価格」ではなく、実際に売買が成立した価格だけを集計して作ります。第1弾10ブランド（2026年8月）に続き、第2弾10ブランド（2026年9月）を追加し、計20ブランドの実売データ（出典・取得日付き）を公開中です。データは定期的に再確認し、更新日を明記します。
+            当サイトの相場データは、業者の広告に載る「参考買取価格」ではなく、実際に売買が成立した価格だけを集計して作ります。第1弾10ブランド（2026年8月）に続き、第2弾10ブランド（2026年9月）を追加し、計23ブランドの実売データ（出典・取得日付き）を公開中です。データは定期的に再確認し、更新日を明記します。
           </p>
         </div>
       </section>
@@ -147,9 +147,9 @@ export default function SoubaPage() {
       </section>
 
 
-      {/* 20ブランドの一覧表 */}
+      {/* 23ブランドの一覧表 */}
       <section className="mx-auto max-w-6xl px-5 py-14 md:py-18">
-        <h2 className="rule-gold text-2xl text-ink mb-4">20ブランドの最高落札価格一覧</h2>
+        <h2 className="rule-gold text-2xl text-ink mb-4">23ブランドの最高落札価格一覧</h2>
         <p className="max-w-3xl text-[0.92rem] leading-relaxed text-ink-soft mb-6">
           各ブランドページに掲載している実売データのうち、<strong>単品で最も高かった落札価格</strong>を1行ずつまとめました。
           まとめ売り・他ブランド品の混在・フリマ出品を除いた単品出品だけを対象にしています。
